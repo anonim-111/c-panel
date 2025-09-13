@@ -1,0 +1,92 @@
+{% extends "admin/change_form.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="col-12 d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">{{ title }}</h2>
+    <a href="?{{ request.GET.urlencode }}&export=1" class="btn btn-success">
+        <i class="fa fa-download"></i> {% trans "Export to Excel" %}
+    </a>
+</div>
+
+<div class="col-12">
+    <div class="card shadow-sm p-3 mb-4 bg-white rounded">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped text-center align-middle mb-0">
+                <thead class="table-light fw-bold">
+                <tr>
+                    <th><a href="#" data-field="name" class="sortable text-decoration-none text-blue">
+                        {% trans "Name" %}</a></th>
+                    <th><a href="#" data-field="total_patients" class="sortable text-decoration-none text-blue">
+                        {% trans "Total patient count" %}</a></th>
+                    <th><a href="#" data-field="total_aggressive_patients" class="sortable text-decoration-none text-blue">
+                        {% trans "Total aggressive patient count" %}</a></th>
+                    <th><a href="#" data-field="on_time_count" class="sortable text-decoration-none text-blue">
+                        {% trans "Number of mentally ill people who have not missed their follow-up check-up" %}</a></th>
+                    <th><a href="#" data-field="late_count" class="sortable text-decoration-none text-blue">
+                        {% trans "Number of mentally ill people who missed their follow-up check-up" %}</a></th>
+                    <th><a href="#" data-field="aggressive_on_time_count" class="sortable text-decoration-none text-blue">
+                        {% trans "Number of aggressive mentally ill people who have not missed their follow-up check-up" %}</a></th>
+                    <th><a href="#" data-field="aggressive_late_count" class="sortable text-decoration-none text-blue">
+                        {% trans "Number of aggressive mentally ill people who missed their follow-up check-up" %}</a></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for n in neighborhoods %}
+                <tr>
+                    <td><a href="{% if perms.psytracks.view_patient %} {% url 'admin:psytracks_patient_changelist' %}?neighborhood={{n.id}} {% else %}#{% endif %}"><b>{{ n.name }}</b></a></td>
+                    <td>{{ n.total_patients }}</td>
+                    <td>{{ n.total_aggressive_patients }}</td>
+                    <td>{{ n.on_time_count }}</td>
+                    <td>{{ n.late_count }}</td>
+                    <td>{{ n.aggressive_on_time_count }}</td>
+                    <td>{{ n.aggressive_late_count }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+                <tfoot class="text-bold table-secondary">
+                <tr>
+                    <td><b>{% trans "Totals" %}</b></td>
+                    <td>{{ totals.total_patients }}</td>
+                    <td>{{ totals.total_aggressive_patients }}</td>
+                    <td>{{ totals.on_time_count }}</td>
+                    <td>{{ totals.late_count }}</td>
+                    <td>{{ totals.aggressive_on_time_count }}</td>
+                    <td>{{ totals.aggressive_late_count }}</td>
+                </tr>
+                </tfoot>
+
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extrahead %}
+  {{ block.super }}
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const currentOrdering = params.get("o");
+
+      document.querySelectorAll("a.sortable").forEach(link => {
+          link.addEventListener("click", function (e) {
+              e.preventDefault();
+              const field = this.dataset.field;
+
+              let newOrdering = field;
+              if (currentOrdering === field) {
+                  newOrdering = "-" + field;
+              } else if (currentOrdering === "-" + field) {
+                  newOrdering = field;
+              }
+
+              params.set("o", newOrdering);
+              window.location.search = params.toString();
+          });
+      });
+  });
+  </script>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+  .error-box {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 80px 60px;
+    max-width: 1000px;
+    margin: 120px auto;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    text-align: center;
+  }
+  .error-box h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+    color: #dc3545;
+  }
+  .error-box h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .error-box p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #555;
+  }
+  .error-box .btn {
+    font-size: 22px;
+    padding: 15px 30px;
+    border-radius: 10px;
+  }
+</style>
+
+<div class="error-box">
+    <h1>🚫 403</h1>
+    <h2>Кириш тақиқланган</h2>
+    <p>Сизда ушбу саҳифага кириш ҳуқуқи мавжуд эмас.</p>
+    <a href="/" class="btn btn-primary">🏠 Бош саҳифа</a>
+</div>
+{% endblock %}

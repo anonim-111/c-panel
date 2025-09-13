@@ -1,0 +1,469 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div class="container-fluid">
+    <!-- Dropdown tumanlar uchun -->
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <select id="districtSelect" class="form-control">
+                <option value="">{% trans "Tuman tanlang..." %}</option>
+                {% for district in district_labels %}
+                <option value="{{ district.id }}">{{ district.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <h2 class="mb-4">{% trans "Umumiy statistika" %}</h2>
+
+
+    <div class="row row-cols-10 g-3 mb-4">
+        <!-- Jami bemorlar -->
+        <div class="col">
+            <a href="{% url 'admin:psytracks_patient_changelist' %}" class="text-decoration-none custom-link">
+                <div class="card text-white shadow mb-4 position-relative"
+                     style="background: linear-gradient(45deg, #007bff, #0dcaf0); height:97%;">
+                    <div class="card-body">
+                        <h6 class="text-uppercase">{% trans "Jami ruhiy kasallar soni" %}</h6>
+                        <h3 class="position-absolute mb-0" style="left: 10px; bottom: 10px;" id="total_patient">
+                            {{ total_patient }}</h3>
+                        <i class="fas fa-users fa-2x position-absolute"
+                           style="right: 10px; bottom: 10px; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="col">
+            <a href="{% if perms.utils.view_neighborhood %} {% url 'admin:utils_neighborhood_changelist' %} {% else %}#{% endif %}" class="text-decoration-none custom-link">
+                <div class="card text-white shadow mb-4 position-relative"
+                     style="background: linear-gradient(45deg, #20c997, #198754); height:97%;">
+                    <div class="card-body">
+                        <h6 class="text-uppercase">{% trans "Mahallalar soni" %}</h6>
+                        <h3 class="position-absolute mb-0" style="left: 10px; bottom: 10px;" id="total_neighborhood">
+                            {{ total_neighborhood }}</h3>
+                        <i class="fas fa-home fa-2x position-absolute"
+                           style="right: 10px; bottom: 10px; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="{% if perms.psytracks.view_doctor %} {% url 'admin:psytracks_doctor_changelist' %} {% else %}#{% endif %}" class="text-decoration-none custom-link">
+                <div class="card text-white shadow mb-4 position-relative"
+                     style="background: linear-gradient(45deg, #e83e8c, #ff6f91); height:97%;">
+                    <div class="card-body">
+                        <h6 class="text-uppercase">{% trans "Shifokor va hamshiralar soni" %}</h6>
+                        <h3 class="position-absolute mb-0" style="left: 10px; bottom: 10px;" id="total_doctor">
+                            {{ total_doctor }}</h3>
+                        <i class="fas fa-user-nurse fa-2x position-absolute"
+                           style="right: 10px; bottom: 10px; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="{% if perms.psytracks.view_psychiatrist %} {% url 'admin:psytracks_psychiatrist_changelist' %} {% else %}#{% endif %}" class="text-decoration-none custom-link">
+                <div class="card text-white shadow mb-4 position-relative"
+                     style="background: linear-gradient(45deg, #1405ed, #6f66ed); height:97%;">
+                    <div class="card-body">
+                        <h6 class="text-uppercase">{% trans "Psixiatrlar soni" %}</h6>
+                        <h3 class="position-absolute mb-0" style="left: 10px; bottom: 10px;" id="total_psychiatrist">
+                            {{ total_psychiatrist }}</h3>
+                        <i class="fas fa-user-md fa-2x position-absolute"
+                           style="right: 10px; bottom: 10px; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="{% if perms.utils.view_inspector %} {% url 'admin:utils_inspector_changelist' %} {% else %}#{% endif %}" class="text-decoration-none custom-link">
+                <div class="card text-white shadow mb-4 position-relative"
+                     style="background: linear-gradient(45deg, #28a745, #5dd39e); height:97%;">
+                    <div class="card-body">
+                        <h6 class="text-uppercase">{% trans "Profilaktika inspektorlari soni" %}</h6>
+                        <h3 class="position-absolute mb-0" style="left: 10px; bottom: 10px;" id="total_inspector">
+                            {{ total_inspector }}</h3>
+                        <i class="fas fa-shield-alt fa-2x position-absolute"
+                           style="right: 10px; bottom: 10px; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{% url 'admin:psytracks_patient_changelist' %}?is_aggressive__exact=1" class="text-decoration-none custom-link">
+                <div class="card text-white shadow mb-4 position-relative"
+                     style="background: linear-gradient(45deg, #fd7e14, #ffae42); height:97%;">
+                    <div class="card-body">
+                        <h6 class="text-uppercase">{% trans "Tajavuzkor ruhiy kasallar soni" %}</h6>
+                        <h3 class="position-absolute mb-0" style="left: 10px; bottom: 10px;"
+                            id="total_aggressive_patient">{{ total_aggressive_patient }}</h3>
+                        <i class="fas fa-exclamation-triangle fa-2x position-absolute"
+                           style="right: 10px; bottom: 10px; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="{% url 'admin:psytracks_patient_changelist' %}?is_overdue=yes" class="text-decoration-none custom-link">
+                <div class="card text-white shadow mb-4 position-relative"
+                     style="background: linear-gradient(45deg, #6f42c1, #9d71e8); height:97%;">
+                    <div class="card-body">
+                        <h6 class="text-uppercase">{% trans "Oxirgi ko'rikni o'tkazib yuborgan ruhiy kasallar soni" %}</h6>
+                        <h3 class="position-absolute mb-0" style="left: 10px; bottom: 10px;"
+                            id="total_late_patient">
+                            {{ total_late_patient }}</h3>
+                        <i class="fas fa-check-circle fa-2x position-absolute"
+                           style="right: 10px; bottom: 10px; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="{% url 'admin:psytracks_patient_changelist' %}?is_aggressive__exact=1&is_overdue=yes" class="text-decoration-none custom-link">
+                <div class="card text-white shadow mb-4 position-relative"
+                     style="background: linear-gradient(45deg, #dc3545, #ff6f61); height:97%;">
+                    <div class="card-body">
+                        <h6 class="text-uppercase">{% trans "Oxirgi ko‘rikni o'tkazib yuborgan tajovuzkor ruhiy kasallar soni" %}</h6>
+                        <h3 class="position-absolute mb-0" style="left: 10px; bottom: 10px;" id="total_aggressive_late_patient">
+                            {{ total_aggressive_late_patient }}</h3>
+                        <i class="fas fa-times-circle fa-2x position-absolute"
+                           style="right: 10px; bottom: 10px; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="{% url 'admin:psytracks_patient_changelist' %}?is_overdue=no" class="text-decoration-none custom-link">
+                <div class="card text-white shadow mb-4 position-relative"
+                     style="background: linear-gradient(45deg, #0d6efd, #5eb8ff); height:97%;">
+                    <div class="card-body">
+                        <h6 class="text-uppercase">{% trans "Oxirgi ko‘rikni o'tkazib yubormagan ruhiy kasallar soni" %}</h6>
+                        <h3 class="position-absolute mb-0" style="left: 10px; bottom: 10px;" id="total_on_time_patient">
+                            {{ total_on_time_patient }}</h3>
+                        <i class="fas fa-user-check fa-2x position-absolute"
+                           style="right: 10px; bottom: 10px; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="{% url 'admin:psytracks_patient_changelist' %}?is_aggressive__exact=1&is_overdue=no" class="text-decoration-none custom-link">
+                <div class="card text-white shadow mb-4 position-relative"
+                     style="background: linear-gradient(45deg, #ff073a, #ff6f91); height:97%;">
+                    <div class="card-body">
+                        <h6 class="text-uppercase">{% trans "Oxirgi ko'rikni o'tkazib yubormagan tajovuzkor ruhiy kasallar soni" %}</h6>
+                        <h3 class="position-absolute mb-0" style="left: 10px; bottom: 10px;" id="total_aggressive_on_time_patient">
+                            {{ total_aggressive_on_time_patient }}</h3>
+                        <i class="fas fa-hospital fa-2x position-absolute"
+                           style="right: 10px; bottom: 10px; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="tooltip"></div>
+    <!-- Xarita (bar chart joyida) -->
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card shadow mb-4">
+                <div class="card-body">
+                    <h6 class="mb-3">🗺 {% trans "Surxondaryo tumanlari bo‘yicha ruhiy kasallar soni" %}</h6>
+                    <div id="map-container" style="max-width:100%; height:500px; text-align:center;">
+                        <svg id="surxondaryo-map" viewBox="0 0 402 558" style="width:100%; height:100%;"></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card shadow mb-4">
+                <div class="card-body">
+                    <h6 class="mb-3">{% trans "Tumanlar bo‘yicha ruhiy kasallar soni" %}</h6>
+                    <div style="height:500px;">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+<!-- Xarita uchun JS -->
+<script type="module">
+    import { surxondaryo_region } from "{% static 'js/Surxondaryo.js' %}";
+
+    const tooltip = document.getElementById("tooltip");
+
+    fetch("/admin/district_patient_stats/")
+      .then(res => res.json())
+      .then(data => {
+        const map = document.getElementById("surxondaryo-map");
+
+        surxondaryo_region.map_data.forEach((d, index) => {
+          const stat = data.find(item => item.name === d.city_name);
+          const count = stat ? stat.total : 0;
+
+          const fill = d.color;
+
+          const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+          path.setAttribute("d", d.data);
+          path.setAttribute("fill", fill);
+          path.setAttribute("stroke", "#333");
+          path.setAttribute("stroke-width", "1");
+          path.style.cursor = "pointer";
+
+          // Tooltip (hover)
+          path.addEventListener("mousemove", (e) => {
+            tooltip.style.display = "block";
+            tooltip.style.left = (e.pageX + 15) + "px";
+            tooltip.style.top = (e.pageY + 15) + "px";
+            tooltip.innerHTML = `<b>${d.city_name}</b><br>Руҳий касаллар: ${count}`;
+          });
+
+          path.addEventListener("mouseleave", () => {
+            tooltip.style.display = "none";
+          });
+
+          map.appendChild(path);
+        });
+      });
+</script>
+
+<!-- Chartlar -->
+<script>
+    // Bar Chart (tumanlar bo‘yicha)
+    const barCtx = document.getElementById("barChart").getContext("2d");
+    let barChart = null;
+
+
+renderBarChart({{ labels|safe }},
+          {{ on_time|safe }},
+          {{ late|safe }},
+          {{ aggressive_on_time|safe }},
+          {{ aggressive_late|safe }},
+          {{ patients_list|safe }},
+          {{ aggressive_patients_list|safe }})
+
+renderTotal(
+            {{total_patient}},
+            {{total_neighborhood}},
+            {{total_doctor}},
+            {{total_psychiatrist}},
+            {{total_inspector}},
+            {{total_aggressive_patient}},
+            {{total_on_time_patient}},
+            {{total_late_patient}},
+            {{total_aggressive_on_time_patient}},
+            {{total_aggressive_late_patient}}
+        );
+
+function renderTotal(total_patient, total_neighborhood, total_doctor, total_psychiatrist, total_inspector, total_aggressive_patient,
+        total_on_time_patient, total_late_patient, total_aggressive_on_time_patient,
+        total_aggressive_late_patient) {
+
+        document.querySelector("#total_patient").innerText = total_patient;
+        document.querySelector("#total_neighborhood").innerText = total_neighborhood;
+        document.querySelector("#total_doctor").innerText = total_doctor;
+        document.querySelector("#total_psychiatrist").innerText = total_psychiatrist;
+        document.querySelector("#total_inspector").innerText = total_inspector;
+        document.querySelector("#total_aggressive_patient").innerText = total_aggressive_patient;
+        document.querySelector("#total_on_time_patient").innerText = total_on_time_patient;
+        document.querySelector("#total_late_patient").innerText = total_late_patient;
+        document.querySelector("#total_aggressive_on_time_patient").innerText = total_aggressive_on_time_patient;
+        document.querySelector("#total_aggressive_late_patient").innerText = total_aggressive_late_patient;
+
+};
+
+
+function renderBarChart(labels, on_time, late, aggressive_on_time, aggressive_late, patients_list, aggressive_patients_list) {
+  if (barChart) {
+    barChart.destroy();
+  }
+
+  barChart = new Chart(barCtx, {
+    type: "bar",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: "Руҳий касаллар",
+          data: patients_list,
+          backgroundColor: "rgb(0, 255, 0)",
+          stack: "on_time"
+        },
+        {
+          label: "Охирги кўрикни ўтказиб юборган руҳий касаллар",
+          data: late,
+          backgroundColor: "rgb(255, 0, 0)",
+          stack: "late"
+        },
+
+        {
+          label: "Тажовузкор руҳий касаллар",
+          data: aggressive_patients_list,
+          backgroundColor: "rgba(0, 255, 200)",
+          stack: "aggressive_patients_list"
+        },
+        {
+          label: "Охирги кўрикни ўтказиб юборган тажовузкор руҳий касаллар",
+          data: aggressive_late,
+          backgroundColor: "rgba(255, 0, 200)",
+          stack: "aggressive_late"
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+            position: "top"
+            },
+        tooltip: {
+          mode: "nearest",
+          intersect: true,
+        },
+        datalabels: {
+        anchor: "end",
+        align: "end",
+        offset: -7,
+        color: "#000",
+        font: { weight: "bold" },
+        formatter: function(value) {
+        if(value === 0){
+            return null
+            }
+        else{
+          return value;
+          }
+        }
+      }
+      },
+      scales: {
+        x: { stacked: true },
+        y: { stacked: true, beginAtZero: true }
+      }
+    },
+    plugins: [ChartDataLabels]
+  })
+}
+
+
+
+function applyDistrict(district) {
+    if (district) {
+    fetch(`/admin/mahalla_patient_stats/${district}/`)
+      .then(res => res.json())
+      .then(data => {
+        renderBarChart(
+          data.labels,
+          data.on_time,
+          data.late,
+          data.aggressive_on_time,
+          data.aggressive_late,
+          data.patients_list,
+          data.aggressive_patients_list,
+        );
+        renderTotal(
+            data.total_patient,
+            data.total_neighborhood,
+            data.total_doctor,
+            data.total_psychiatrist,
+            data.total_inspector,
+            data.total_aggressive_patient,
+            data.total_on_time_patient,
+            data.total_late_patient,
+            data.total_on_time_aggressive_patient,
+            data.total_late_aggressive_patient
+        );
+      });
+    document.querySelectorAll(".custom-link").forEach(card => {
+      if (card.getAttribute("href") !== "#") {
+        let url = new URL(card.href, window.location.origin);
+        url.searchParams.set("district", district);
+        card.href = url.toString();
+    }
+
+    });
+  }
+  else{
+        renderBarChart(
+            {{ labels|safe }},
+            {{ on_time|safe }},
+            {{ late|safe }},
+            {{ aggressive_on_time|safe }},
+            {{ aggressive_late|safe }},
+            {{ patients_list|safe }},
+            {{ aggressive_patients_list|safe }},
+            );
+
+        renderTotal(
+            {{total_patient}},
+            {{total_neighborhood}},
+            {{total_doctor}},
+            {{total_psychiatrist}},
+            {{total_inspector}},
+            {{total_aggressive_patient}},
+            {{total_on_time_patient}},
+            {{total_late_patient}},
+            {{total_aggressive_on_time_patient}},
+            {{total_aggressive_late_patient}}
+        );
+        document.querySelectorAll(".custom-link").forEach(card => {
+        if (card.getAttribute("href") !== "#") {
+            let url = new URL(card.href, window.location.origin);
+
+            if (url.searchParams.has("district")) {
+                url.searchParams.delete("district");
+            }
+
+            card.href = url.toString();
+        }
+
+        });
+  }
+  }
+
+window.addEventListener("pageshow", function (event) {
+      const districtSelect = document.getElementById("districtSelect").value;
+      applyDistrict(districtSelect)
+});
+
+
+document.getElementById("districtSelect").addEventListener("change", function() {
+  const district = this.value;
+  applyDistrict(district)
+});
+
+</script>
+
+<style>
+    #tooltip {
+        position: absolute;
+        background: rgba(0,0,0,0.75);
+        color: #fff;
+        padding: 6px 10px;
+        border-radius: 6px;
+        font-size: 14px;
+        display: none;
+        pointer-events: none;
+        z-index: 9999;
+      }
+</style>
+{% endblock %}

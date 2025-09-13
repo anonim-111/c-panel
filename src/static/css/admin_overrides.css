@@ -1,0 +1,24 @@
+
+/*.change-list #result_list {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.change-list #result_list th,
+.change-list #result_list td {
+    white-space: nowrap;
+}*/
+/* Admin list view tables */
+#changelist-form table {
+    table-layout: fixed;  /* ustunlar kengligini boshqarish uchun */
+    width: 100%;
+}
+
+#changelist-form table th,
+#changelist-form table td {
+    width: 200px;          /* barcha ustunlar bir xil kenglik */
+    white-space: normal;   /* matnni keyingi qatorga o‘tkazadi */
+    word-wrap: break-word; /* so‘zlarni ham bo‘lib chiqaradi */
+    overflow: visible;     /* matn qirqilmasin */
+}

@@ -1,0 +1,299 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin_overrides.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <div class="sidebar">
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+
+                {% with view_name=request.resolver_match.view_name %}
+
+                <!-- Dashboard -->
+                <li class="nav-item">
+                    <a href="{% url 'admin:index' %}" class="nav-link {% if view_name == 'admin:index' %}active{% endif %}"
+                       style="padding: 2rem 1rem; font-size:20px">
+                        <i class="nav-icon fas fa-home"></i>
+                        <p>{% trans "Dashboard" %}</p>
+                    </a>
+                </li>
+
+                <!-- Block A -->
+                <li class="nav-item has-treeview {% if 'psytracks_' in view_name or 'utils_' in view_name or 'users_' in view_name or 'auth_group' in view_name or 'statistics' in view_name %}menu-open{% endif %}">
+                    <a href="#" class="nav-link"
+                       style="padding: 1rem 1rem; font-size:15px">
+                        <i class="nav-icon fas fa-layer-group"></i>
+                        <p>
+                            {% trans "Psytracks" %}
+                            <i class="right fas fa-angle-right" style="padding-top:7px;"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+<!--                                {% if perms.psytracks.view_socialdomesticenvironment %}-->
+
+<!--                        &lt;!&ndash; Social-domestic environments &ndash;&gt;-->
+<!--                        <li class="nav-item">-->
+<!--                            <a href="{% url 'admin:psytracks_socialdomesticenvironment_changelist' %}"-->
+<!--                               class="nav-link {% if 'psytracks_socialdomesticenvironment' in view_name %}active{% endif %}">-->
+<!--                                <i class="fas fa-home-user nav-icon"></i>-->
+<!--                                <p>{% trans "Social-domestic environments" %}</p>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                                {% endif %}-->
+<!--                                {% if perms.psytracks.view_reasonforspecialconsideration %}-->
+
+<!--                        &lt;!&ndash; Reasons for special consideration &ndash;&gt;-->
+<!--                        <li class="nav-item">-->
+<!--                            <a href="{% url 'admin:psytracks_reasonforspecialconsideration_changelist' %}"-->
+<!--                               class="nav-link {% if 'psytracks_reasonforspecialconsideration' in view_name %}active{% endif %}">-->
+<!--                                <i class="fas fa-clipboard-list nav-icon"></i>-->
+<!--                                <p>{% trans "Reasons for special consideration" %}</p>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                                {% endif %}-->
+                                {% if perms.psytracks.view_patient %}
+
+                        <!-- Patients -->
+                        <li class="nav-item">
+                            <a href="{% url 'admin:psytracks_patient_changelist' %}"
+                               class="nav-link {% if 'psytracks_patient' in view_name %}active{% endif %}">
+                                <i class="fas fa-user-injured nav-icon"></i>
+                                <p>{% trans "Patients" %}</p>
+                            </a>
+                        </li>
+                                {% endif %}
+                                {% if perms.psytracks.view_doctor %}
+
+                        <!-- Doctors -->
+                        <li class="nav-item">
+                            <a href="{% url 'admin:psytracks_doctor_changelist' %}"
+                               class="nav-link {% if 'psytracks_doctor' in view_name %}active{% endif %}">
+                                <i class="fas fa-user-nurse nav-icon"></i>
+                                <p>{% trans "Doctors" %}</p>
+                            </a>
+                        </li>
+                                {% endif %}
+                                {% if perms.psytracks.view_psychiatrist %}
+
+                        <!-- Doctors -->
+                        <li class="nav-item">
+                            <a href="{% url 'admin:psytracks_psychiatrist_changelist' %}"
+                               class="nav-link {% if 'psytracks_psychiatrist' in view_name %}active{% endif %}">
+                                <i class="fas fa-user-md nav-icon"></i>
+                                <p>{% trans "Psychiatrists" %}</p>
+                            </a>
+                        </li>
+                                {% endif %}
+                            {% if perms.utils.view_region or perms.utils.view_district or perms.utils.view_neighborhood or perms.utils.view_inspector %}
+                        <!-- Utils -->
+                        <li class="nav-item has-treeview {% if 'utils_' in view_name and 'monitoring' not in view_name %}menu-open{% endif %}">
+                            <a href="#" class="nav-link"
+                               style="padding-top: 1rem; padding-bottom: 1rem; font-size:15px">
+                                <i class="nav-icon fas fa-cogs"></i>
+                                <p>
+                                    {% trans "Utils" %}
+                                    <i class="right fas fa-angle-right" style="padding-top:7px;"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                {% if perms.utils.view_region %}
+                                <li class="nav-item">
+                                    <a href="{% url 'admin:utils_region_changelist' %}"
+                                       class="nav-link {% if 'utils_region' in view_name %}active{% endif %}">
+                                        <i class="fas fa-map nav-icon"></i>
+                                        <p>{% trans "Regions" %}</p>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if perms.utils.view_district %}
+                                <li class="nav-item">
+                                    <a href="{% url 'admin:utils_district_changelist' %}"
+                                       class="nav-link {% if 'utils_district_' in view_name %}active{% endif %}">
+                                        <i class="fas fa-city nav-icon"></i>
+                                        <p>{% trans "Districts" %}</p>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if perms.utils.view_neighborhood %}
+                                <li class="nav-item">
+                                    <a href="{% url 'admin:utils_neighborhood_changelist' %}"
+                                       class="nav-link {% if 'utils_neighborhood' in view_name %}active{% endif %}">
+                                        <i class="fas fa-house-user nav-icon"></i>
+                                        <p>{% trans "Neighborhoods" %}</p>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if perms.utils.view_inspector %}
+                                <li class="nav-item">
+                                    <a href="{% url 'admin:utils_inspector_changelist' %}"
+                                       class="nav-link {% if 'utils_inspector' in view_name %}active{% endif %}">
+                                        <i class="fas fa-user-shield nav-icon"></i>
+                                        <p>{% trans "Inspectors" %}</p>
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                            {% endif %}
+                            {% if perms.utils.view_statistics or perms.utils.view_districtmonitoring %}
+                        <!-- Statistics (new dropdown) -->
+                        <li class="nav-item has-treeview {% if view_name == 'admin:statistics' or 'utils_districtmonitoring' in view_name %}menu-open{% endif %}">
+                            <a href="#" class="nav-link"
+                               style="padding-top: 1rem; padding-bottom: 1rem; font-size:15px">
+                                <i class="nav-icon fas fa-chart-bar"></i>
+                                <p>
+                                    {% trans "Statistics" %}
+                                    <i class="right fas fa-angle-right" style="padding-top:7px;"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                {% if perms.utils.view_statistics %}
+                                <!-- Custom Statistics -->
+                                <li class="nav-item">
+                                    <a href="{% url 'admin:statistics' %}"
+                                       class="nav-link {% if view_name == 'admin:statistics' %}active{% endif %}">
+                                        <i class="fas fa-chart-pie nav-icon"></i>
+                                        <p>{% trans "Statistics" %}</p>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if perms.utils.view_districtmonitoring %}
+
+                                <!-- Monitoring (moved here) -->
+                                <li class="nav-item">
+                                    <a href="{% url 'admin:utils_districtmonitoring_changelist' %}"
+                                       class="nav-link {% if 'utils_districtmonitoring' in view_name %}active{% endif %}">
+                                        <i class="fas fa-chart-line nav-icon"></i>
+                                        <p>{% trans "Monitoring" %}</p>
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                            {% endif %}
+                            {% if perms.users.view_user or perms.auth.view_group or perms.users.view_districtadmin or perms.users.view_regionadmin %}
+                        <!-- Users -->
+                        <li class="nav-item has-treeview {% if 'users_user' in view_name or 'auth_group' in view_name %}menu-open{% endif %}">
+                            <a href="#" class="nav-link"
+                               style="padding-top: 1rem; padding-bottom: 1rem; font-size:15px">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>
+                                    {% trans "Users" %}
+                                    <i class="right fas fa-angle-right" style="padding-top:7px;"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                {% if perms.users.view_user %}
+                                <li class="nav-item">
+                                    <a href="{% url 'admin:users_user_changelist' %}"
+                                       class="nav-link {% if 'users_user' in view_name %}active{% endif %}">
+                                        <i class="fas fa-user nav-icon"></i>
+                                        <p>{% trans "Users" %}</p>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if perms.auth.view_group %}
+                                <li class="nav-item">
+                                    <a href="{% url 'admin:auth_group_changelist' %}"
+                                       class="nav-link {% if 'auth_group' in view_name %}active{% endif %}">
+                                        <i class="fas fa-users-cog nav-icon"></i>
+                                        <p>{% trans "Groups" %}</p>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if perms.users.view_districtadmin %}
+                                <li class="nav-item">
+                                    <a href="{% url 'admin:users_districtadmin_changelist' %}"
+                                       class="nav-link {% if 'users_districtadmin' in view_name %}active{% endif %}">
+                                        <i class="fas fa-map nav-icon"></i>
+                                        <p>{% trans "District admin" %}</p>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if perms.users.view_regionadmin %}
+                                <li class="nav-item">
+                                    <a href="{% url 'admin:users_regionadmin_changelist' %}"
+                                       class="nav-link {% if 'users_regionadmin' in view_name %}active{% endif %}">
+                                        <i class="fas fa-landmark nav-icon"></i>
+                                        <p>{% trans "Region admin" %}</p>
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                            {% endif %}
+                    </ul>
+                </li>
+
+                {% endwith %}
+            </ul>
+        </nav>
+    </div>
+</aside>
+{% endblock %}
+
+
+
+{% block footer %}
+<footer class="custom-footer text-white mt-4">
+    <div class="container py-4">
+        <div class="row">
+            <!-- Chap tomonda loyiha haqida -->
+            <div class="col-md-4">
+                <h5 class="fw-bold">📊 {% trans "Umumiy boshqaruv tizimi" %}</h5>
+                <p class="small">
+                    {% trans "Bu tizim Surxondaryo viloyati tumanlari bo‘yicha umumiy monitoring va statistik tahlil qilish uchun mo‘ljallangan." %}
+                </p>
+                <p class="small mb-0">© {% trans "2025 Barcha huquqlar himoyalangan." %}</p>
+            </div>
+
+            <!-- Telefonlar -->
+            <div class="col-md-4">
+                <h6 class="fw-bold">📞 {% trans "Telefonlar" %}</h6>
+                <p class="mb-1">+998 (90) 123-45-67</p>
+                <p class="mb-1">+998 (91) 765-43-21</p>
+            </div>
+
+            <!-- Ijtimoiy tarmoqlar -->
+            <div class="col-md-4 text-md-end">
+                <h6 class="fw-bold">🌐 {% trans "Biz bilan bog‘laning" %}</h6>
+                <a href="#" target="_blank" class="text-white me-3">
+                    <i class="fab fa-telegram fa-lg"></i>
+                </a>
+                <a href="#" class="text-white me-3">
+                    <i class="fab fa-facebook fa-lg"></i>
+                </a>
+                <a href="#" class="text-white me-3">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="#" class="text-white">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .custom-footer {
+        background: linear-gradient(135deg, #1f1c2c, #928dab);
+        border-top: 2px solid rgba(255,255,255,0.2);
+    }
+    .custom-footer a {
+        text-decoration: none;
+        transition: opacity 0.3s;
+    }
+    .custom-footer a:hover {
+        opacity: 0.7;
+    }
+</style>
+{% endblock %}

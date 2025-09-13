@@ -1,0 +1,2537 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-10 16:44+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\core\settings.py:94
+msgid "Control Panel Admin"
+msgstr "Бошқарув панели администратори"
+
+#: .\core\settings.py:95
+msgid "Control Panel"
+msgstr "Бошқарув панели"
+
+#: .\core\settings.py:96
+msgid "Control Panel Welcome sign"
+msgstr "Бошқарув панелига хуш келибсиз"
+
+#: .\core\settings.py:138
+msgid "Uzbek"
+msgstr "Ўзбек"
+
+#: .\psytracks\admin.py:24 .\psytracks\admin.py:623 .\psytracks\models.py:131
+msgid "psychiatrist"
+msgstr "психиатр"
+
+#: .\psytracks\admin.py:61 .\psytracks\admin.py:644 .\psytracks\models.py:130
+msgid "inspector"
+msgstr "профилактика инспектори"
+
+#: .\psytracks\admin.py:98 .\psytracks\admin.py:242 .\psytracks\admin.py:609
+#: .\psytracks\admin.py:616 .\psytracks\models.py:36 .\psytracks\models.py:129
+#: .\utils\admin.py:100 .\utils\models.py:44
+msgid "neighborhood"
+msgstr "маҳалла"
+
+#: .\psytracks\admin.py:135 .\psytracks\admin.py:172 .\psytracks\admin.py:209
+#: .\psytracks\admin.py:604 .\psytracks\models.py:50 .\users\models.py:18
+#: .\utils\admin.py:26 .\utils\admin.py:63 .\utils\models.py:30
+msgid "district"
+msgstr "туман"
+
+#: .\psytracks\admin.py:279
+msgid "Is overdue"
+msgstr "Муддати ўтганми"
+
+#: .\psytracks\admin.py:284
+msgid "Yes"
+msgstr "Ҳа"
+
+#: .\psytracks\admin.py:285
+msgid "No"
+msgstr "Йўқ"
+
+#: .\psytracks\admin.py:630 .\psytracks\models.py:139
+msgid "reason for special consideration"
+msgstr "Махсус ҳисобга олиш сабаби"
+
+#: .\psytracks\admin.py:637 .\psytracks\models.py:141
+msgid "social-domestic environment"
+msgstr "ижтимоий-маиший муҳит"
+
+#: .\psytracks\admin.py:646
+msgid "next medical examination deadline"
+msgstr "кейинги тиббий кўрикнинг охирги муддати"
+
+#: .\psytracks\admin.py:653
+msgid "days left until the next medical examination"
+msgstr "кейинги тиббий кўрикгача қолган кунлар"
+
+#: .\psytracks\admin.py:666
+#, python-format
+msgid "%(days)d days past"
+msgstr "%(days)d кун ўтган"
+
+#: .\psytracks\admin.py:668
+#, python-format
+msgid "%(days)d days left"
+msgstr "%(days)d кун қолган"
+
+#: .\psytracks\apps.py:7 .\templates\admin\base_site.html:35
+msgid "Psytracks"
+msgstr "Блок-А"
+
+#: .\psytracks\models.py:10
+msgid "Regularly receiving"
+msgstr "Мунтазам олаяпти"
+
+#: .\psytracks\models.py:11
+msgid "Not receiving"
+msgstr "Олмаяпти"
+
+#: .\psytracks\models.py:12
+msgid "Quickly receiving"
+msgstr "Тез тез олаяпти"
+
+#: .\psytracks\models.py:13
+msgid "Reraly receiving"
+msgstr "Камдан кам олаяпти"
+
+#: .\psytracks\models.py:17
+msgid "Alcohol and drug"
+msgstr "Алкагол ва наркотик модда истеъмол қилади"
+
+#: .\psytracks\models.py:18
+msgid "Alcohol"
+msgstr "Алкагол истеъмол қилади"
+
+#: .\psytracks\models.py:19
+msgid "Drug"
+msgstr "Наркотик модда истеъмол қилади"
+
+#: .\psytracks\models.py:20
+msgid "Not consume"
+msgstr "Истеъмол қилмайди"
+
+#: .\psytracks\models.py:24
+msgid "At home"
+msgstr "Уйда"
+
+#: .\psytracks\models.py:25
+msgid "In hospital"
+msgstr "Шифохонада"
+
+#: .\psytracks\models.py:26
+msgid "Out of the area"
+msgstr "Ҳудудидан чиқиб кетган"
+
+#: .\psytracks\models.py:27
+msgid "Address unknown"
+msgstr "Манзили ноаниқ"
+
+#: .\psytracks\models.py:31 .\psytracks\models.py:47 .\psytracks\models.py:124
+#: .\utils\models.py:42
+msgid "full_name"
+msgstr "Ф.И.Ш."
+
+#: .\psytracks\models.py:32 .\psytracks\models.py:48 .\utils\models.py:43
+msgid "phone"
+msgstr "телефон"
+
+#: .\psytracks\models.py:33
+msgid "brigade_number"
+msgstr "бригада рақами"
+
+#: .\psytracks\models.py:34
+msgid "polyclinic name"
+msgstr "поликлиника номи"
+
+#: .\psytracks\models.py:35
+msgid "birth date"
+msgstr "Туғилган санаси"
+
+#: .\psytracks\models.py:39
+msgid "Doctor"
+msgstr "Шифокор"
+
+#: .\psytracks\models.py:40 .\templates\admin\base_site.html:81
+msgid "Doctors"
+msgstr "Шифокорлар"
+
+#: .\psytracks\models.py:49 .\users\models.py:19 .\users\models.py:28
+#: .\utils\models.py:31 .\utils\models.py:45
+msgid "user"
+msgstr "фойдаланувчи"
+
+#: .\psytracks\models.py:53
+msgid "Psychiatrist"
+msgstr "Психиатр"
+
+#: .\psytracks\models.py:54 .\templates\admin\base_site.html:92
+msgid "Psychiatrists"
+msgstr "Психиатрлар"
+
+#: .\psytracks\models.py:61 .\psytracks\models.py:72 .\utils\models.py:6
+#: .\utils\models.py:17 .\utils\models.py:29 .\utils\models.py:56
+msgid "name"
+msgstr "номи"
+
+#: .\psytracks\models.py:64
+msgid "Reason for special consideration"
+msgstr "Махсус ҳисобга олиш сабаби"
+
+#: .\psytracks\models.py:65 .\templates\admin\base_site.html:59
+msgid "Reasons for special consideration"
+msgstr "Махсус ҳисобга олиш сабаблари"
+
+#: .\psytracks\models.py:75
+msgid "Social-domestic environment"
+msgstr "Ижтимоий-маиший муҳит"
+
+#: .\psytracks\models.py:76 .\templates\admin\base_site.html:48
+msgid "Social-domestic environments"
+msgstr "Ижтимоий-маиший муҳитлар"
+
+#: .\psytracks\models.py:106
+#, python-format
+msgid "The file size must not exceed %(size)d MB."
+msgstr "Файл ҳажми %(size)d МБ дан ошмаслиги керак."
+
+#: .\psytracks\models.py:116
+#, python-format
+msgid "Only %(extensions)s files are allowed."
+msgstr "Фақат %(extensions)s файлларига рухсат берилади."
+
+#: .\psytracks\models.py:125
+msgid "pinfl"
+msgstr "ЖШШИР"
+
+#: .\psytracks\models.py:126
+msgid "birth_date"
+msgstr "Туғилган санаси"
+
+#: .\psytracks\models.py:127
+msgid "is aggressive"
+msgstr "тажовузкорми"
+
+#: .\psytracks\models.py:128
+msgid "maximal examination interval (in days)"
+msgstr "максимал кўрик оралиғи (кунларда)"
+
+#: .\psytracks\models.py:132
+msgid "address"
+msgstr "манзили"
+
+#: .\psytracks\models.py:133
+msgid "date of the last psychiatric appointment"
+msgstr "Охирги психиатр қабулига келган куни"
+
+#: .\psytracks\models.py:134
+msgid "file of the last psychiatric appointment"
+msgstr "Охирги психиатр қабули файли"
+
+#: .\psytracks\models.py:135
+msgid "date of last home visit by a doctor or nurse"
+msgstr "Охирги шифокор ёки ҳамшира томонидан уйдаги курик"
+
+#: .\psytracks\models.py:136
+msgid "file of last home visit by a doctor or nurse"
+msgstr "Охирги уйдаги курик файли"
+
+#: .\psytracks\models.py:137
+msgid "if the patient has not been seen by a doctor within a month, the reason"
+msgstr "Агар бир ой ичида кўрилмаган бўлса сабабини қўрсатилсин"
+
+#: .\psytracks\models.py:138
+msgid "receiving supportive therapy"
+msgstr "Қувватловчи терапия олиниши"
+
+#: .\psytracks\models.py:140
+msgid "description for special consideration"
+msgstr "Махсус ҳисобга олиш тавсифи"
+
+#: .\psytracks\models.py:142
+msgid "alcohol and drug use"
+msgstr "алкагол ва наркотик модда истеъмол қилиши"
+
+#: .\psytracks\models.py:143
+msgid "where is now"
+msgstr "Бемор ҳозирги кунда қаерда"
+
+#: .\psytracks\models.py:144
+msgid "description where is now"
+msgstr "ҳозирги кунда қаерда изоҳ"
+
+#: .\psytracks\models.py:145
+msgid "from date of last hospitalization"
+msgstr "Охирги госпитализация бошланиш вақти"
+
+#: .\psytracks\models.py:146
+msgid "from date of last hospitalization file"
+msgstr "Охирги госпитализация бошланиш вақти файли"
+
+#: .\psytracks\models.py:147
+msgid "to date of last hospitalization"
+msgstr "Охирги госпитализация тугаш вақти"
+
+#: .\psytracks\models.py:148
+msgid "to date of last hospitalization file"
+msgstr "Охирги госпитализация тугаш вақти файли"
+
+#: .\psytracks\models.py:152
+msgid "Patient"
+msgstr "Руҳий ҳолати бузилган шахс"
+
+#: .\psytracks\models.py:153 .\templates\admin\base_site.html:70
+msgid "Patients"
+msgstr "Руҳий ҳолати бузилган шахслар"
+
+#: .\templates\admin\base_site.html:25
+msgid "Dashboard"
+msgstr "Бош саҳифа"
+
+#: .\templates\admin\base_site.html:103 .\utils\apps.py:9
+msgid "Utils"
+msgstr "Созламалар"
+
+#: .\templates\admin\base_site.html:113 .\utils\models.py:10
+msgid "Regions"
+msgstr "Вилоятлар"
+
+#: .\templates\admin\base_site.html:122 .\utils\models.py:22
+msgid "Districts"
+msgstr "Туманлар"
+
+#: .\templates\admin\base_site.html:131 .\utils\models.py:35
+msgid "Neighborhoods"
+msgstr "Маҳаллалар"
+
+#: .\templates\admin\base_site.html:140 .\utils\models.py:49
+msgid "Inspectors"
+msgstr "Профилактика инспекторлари"
+
+#: .\templates\admin\base_site.html:154 .\templates\admin\base_site.html:165
+msgid "Statistics"
+msgstr "Статистика"
+
+#: .\templates\admin\base_site.html:176 .\utils\models.py:71
+#: .\utils\models.py:72
+msgid "Monitoring"
+msgstr "Мониторинг"
+
+#: .\templates\admin\base_site.html:190 .\templates\admin\base_site.html:200
+#: .\users\apps.py:9 .\users\models.py:14
+msgid "Users"
+msgstr "Фойдаланувчилар"
+
+#: .\templates\admin\base_site.html:209 .\users\apps.py:14
+msgid "Groups"
+msgstr "Гуруҳлар"
+
+#: .\templates\admin\base_site.html:218 .\users\models.py:22
+msgid "District admin"
+msgstr "Туман админи"
+
+#: .\templates\admin\base_site.html:227 .\users\models.py:31
+msgid "Region admin"
+msgstr "Вилоят админи"
+
+#: .\templates\admin\base_site.html:252
+msgid "Umumiy boshqaruv tizimi"
+msgstr "Умумий бошқарув тизими"
+
+#: .\templates\admin\base_site.html:254
+msgid ""
+"Bu tizim Surxondaryo viloyati tumanlari bo‘yicha umumiy monitoring va "
+"statistik tahlil qilish uchun mo‘ljallangan."
+msgstr ""
+"Бу тизим Сурхондарё вилояти туманлари бўйича умумий мониторинг ва статистик "
+"таҳлил қилиш учун мўлжалланган."
+
+#: .\templates\admin\base_site.html:256
+msgid "2025 Barcha huquqlar himoyalangan."
+msgstr "2025 Барча ҳуқуқлар ҳимояланган."
+
+#: .\templates\admin\base_site.html:261
+msgid "Telefonlar"
+msgstr "Телефонлар"
+
+#: .\templates\admin\base_site.html:268
+msgid "Biz bilan bog‘laning"
+msgstr "Биз билан боғланинг"
+
+#: .\templates\admin\dashboard.html:10 .\templates\admin\statistics.html:10
+msgid "Tuman tanlang..."
+msgstr "Туман танланг..."
+
+#: .\templates\admin\dashboard.html:17 .\templates\admin\statistics.html:17
+msgid "Umumiy statistika"
+msgstr "Умумий статистика"
+
+#: .\templates\admin\dashboard.html:27 .\templates\admin\statistics.html:27
+msgid "Jami ruhiy kasallar soni"
+msgstr "Жами руҳий касаллар сони"
+
+#: .\templates\admin\dashboard.html:43 .\templates\admin\statistics.html:43
+msgid "Mahallalar soni"
+msgstr "Маҳаллалар сони"
+
+#: .\templates\admin\dashboard.html:58 .\templates\admin\statistics.html:58
+msgid "Shifokor va hamshiralar soni"
+msgstr "Шифокор ва ҳамширалар сони"
+
+#: .\templates\admin\dashboard.html:73 .\templates\admin\statistics.html:73
+msgid "Psixiatrlar soni"
+msgstr "Психиатрлар сони"
+
+#: .\templates\admin\dashboard.html:88 .\templates\admin\statistics.html:88
+msgid "Profilaktika inspektorlari soni"
+msgstr "Профилактика инспекторлари сони"
+
+#: .\templates\admin\dashboard.html:102 .\templates\admin\statistics.html:102
+msgid "Tajavuzkor ruhiy kasallar soni"
+msgstr "Тажовузкор руҳий касаллар сони"
+
+#: .\templates\admin\dashboard.html:117 .\templates\admin\statistics.html:117
+msgid "Oxirgi ko'rikni o'tkazib yuborgan ruhiy kasallar soni"
+msgstr "Охирги кўрикни ўтказиб юборган руҳий касаллар сони"
+
+#: .\templates\admin\dashboard.html:133 .\templates\admin\statistics.html:133
+msgid "Oxirgi ko‘rikni o'tkazib yuborgan tajovuzkor ruhiy kasallar soni"
+msgstr "Охирги кўрикни ўтказиб юборган тажовузкор руҳий касаллар сони"
+
+#: .\templates\admin\dashboard.html:148 .\templates\admin\statistics.html:148
+msgid "Oxirgi ko‘rikni o'tkazib yubormagan ruhiy kasallar soni"
+msgstr "Охирги кўрикни ўтказиб юбормаган руҳий касаллар сони"
+
+#: .\templates\admin\dashboard.html:163 .\templates\admin\statistics.html:163
+msgid "Oxirgi ko'rikni o'tkazib yubormagan tajovuzkor ruhiy kasallar soni"
+msgstr "Охирги кўрикни ўтказиб юбормаган тажовузкор руҳий касаллар сони"
+
+#: .\templates\admin\dashboard.html:181 .\templates\admin\statistics.html:181
+msgid "Surxondaryo tumanlari bo‘yicha ruhiy kasallar soni"
+msgstr "Сурхондарё туманлари бўйича руҳий касаллар сони"
+
+#: .\templates\admin\dashboard.html:191 .\templates\admin\statistics.html:191
+msgid "Tumanlar bo‘yicha ruhiy kasallar soni"
+msgstr "Туманлар бўйича руҳий касаллар сони"
+
+#: .\templates\admin\district_monitoring.html:5
+#: .\templates\admin\district_monitoring_change_table.html:10
+#: .\templates\admin\patients_changelist.html:6
+msgid "Export to Excel"
+msgstr "Ехcелга юклаб олиш"
+
+#: .\templates\admin\district_monitoring.html:17
+#: .\templates\admin\district_monitoring_change_table.html:51
+msgid "Totals"
+msgstr "Жами"
+
+#: .\templates\admin\district_monitoring_change_table.html:21
+msgid "Name"
+msgstr "Номи"
+
+#: .\templates\admin\district_monitoring_change_table.html:23
+#: .\utils\admin.py:440
+msgid "Total patient count"
+msgstr "Жами руҳий касаллар сони"
+
+#: .\templates\admin\district_monitoring_change_table.html:25
+#: .\utils\admin.py:444
+msgid "Total aggressive patient count"
+msgstr "Жами тажовузкор руҳий касаллар сони"
+
+#: .\templates\admin\district_monitoring_change_table.html:27
+#: .\utils\admin.py:452
+msgid ""
+"Number of mentally ill people who have not missed their follow-up check-up"
+msgstr "Кейинги кўрикни ўтказиб юбормаган руҳий касаллар сони"
+
+#: .\templates\admin\district_monitoring_change_table.html:29
+#: .\utils\admin.py:456
+msgid "Number of mentally ill people who missed their follow-up check-up"
+msgstr "Кейинги кўрикни ўтказиб юборган руҳий касаллар сони"
+
+#: .\templates\admin\district_monitoring_change_table.html:31
+#: .\utils\admin.py:460
+msgid ""
+"Number of aggressive mentally ill people who have not missed their follow-up "
+"check-up"
+msgstr "Кейинги кўрикни ўтказиб юбормаган тажовузкор руҳий касаллар сони"
+
+#: .\templates\admin\district_monitoring_change_table.html:33
+#: .\utils\admin.py:464
+msgid ""
+"Number of aggressive mentally ill people who missed their follow-up check-up"
+msgstr "Кейинги кўрикни ўтказиб юборган тажовузкор руҳий касаллар сони"
+
+#: .\templates\admin\statistics.html:205
+msgid "Umumiy davolanish bo'yicha statistika"
+msgstr "Умумий даволаниш бўйича статистика"
+
+#: .\templates\admin\statistics.html:217
+msgid ""
+"Oxirgi ko'rikni o'tkazib yuborgan va o'tkazib yubormagan ruhiy kasallar "
+"bo'yicha"
+msgstr ""
+"Охирги кўрикни ўтказиб юборган ва ўтказиб юбормаган руҳий касаллар бўйича"
+
+#: .\users\admin.py:10
+msgid "General"
+msgstr "Асосий"
+
+#: .\users\admin.py:11
+msgid "Personal info"
+msgstr "Шахсий маълумотлар"
+
+#: .\users\admin.py:12
+msgid "Permissions"
+msgstr "Рухсатлар"
+
+#: .\users\apps.py:13
+msgid "Group"
+msgstr "Гуруҳ"
+
+#: .\users\forms.py:7
+msgid "Password"
+msgstr "Парол"
+
+#: .\users\forms.py:8
+msgid "Password confirmation"
+msgstr "Паролни тасдиқлаш"
+
+#: .\users\forms.py:18
+msgid "Passwords don't match"
+msgstr "Пароллар мос келмади."
+
+#: .\users\models.py:7
+msgid "telegram ID"
+msgstr "телеграм ИД"
+
+#: .\users\models.py:13
+msgid "User"
+msgstr "Фойдаланувчи"
+
+#: .\users\models.py:23
+msgid "District admins"
+msgstr "Туман админлари"
+
+#: .\users\models.py:27 .\utils\models.py:18
+msgid "region"
+msgstr "вилоят"
+
+#: .\users\models.py:32
+msgid "Region admins"
+msgstr "Вилоят админлари"
+
+#: .\utils\admin.py:448
+msgid "Total neighborhood count"
+msgstr "Жами маҳаллалар сони"
+
+#: .\utils\models.py:9
+msgid "Region"
+msgstr "Вилоят"
+
+#: .\utils\models.py:21
+msgid "District"
+msgstr "Туман"
+
+#: .\utils\models.py:34
+msgid "Neighborhood"
+msgstr "Маҳалла"
+
+#: .\utils\models.py:48
+msgid "Inspector"
+msgstr "Профилактика инспектори"
+
+#: .\utils\models.py:57
+msgid "key"
+msgstr "калит"
+
+#: .\utils\models.py:58
+msgid "value"
+msgstr "қиймат"
+
+#: .\utils\models.py:61
+msgid "Settings key"
+msgstr "Созламалар калити"
+
+#: .\utils\models.py:62
+msgid "Settings keys"
+msgstr "Созламалар калитлари"
+
+
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr "%(verbose_name_plural)s ларни ўчириш"
+
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr "%(count)d%(items)s муваффақиятли ўчирилди."
+
+#, python-format
+msgid "Cannot delete %(name)s"
+msgstr "%(name)s ўчириб бўлмади"
+
+msgid "Are you sure?"
+msgstr "Ишончингиз комилми?"
+
+msgid "Administration"
+msgstr "Администрация"
+
+msgid "All"
+msgstr "Барчаси"
+
+msgid "Unknown"
+msgstr "Номаълум"
+
+msgid "Any date"
+msgstr "Исталган кун"
+
+msgid "Today"
+msgstr "Бугун"
+
+msgid "Past 7 days"
+msgstr "Ўтган 7 кун"
+
+msgid "This month"
+msgstr "Шу ойда"
+
+msgid "This year"
+msgstr "Шу йилда"
+
+msgid "No date"
+msgstr "Санаси йўқ"
+
+msgid "Has date"
+msgstr "Санаси бор"
+
+msgid "Empty"
+msgstr "Бўш"
+
+msgid "Not empty"
+msgstr "Бўш эмас"
+
+#, python-format
+msgid ""
+"Please enter the correct %(username)s and password for a staff account. Note "
+"that both fields may be case-sensitive."
+msgstr ""
+"Ходимлар аккаунти учун тўғри %(username)s ва паролни киритинг. "
+"Эътибор беринг, ҳар икки майдонда катта-кичик ҳарфлар фарқланиши мумкин."
+
+msgid "Action:"
+msgstr "Ҳаракат:"
+
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr "Яна бир %(verbose_name)s қўшиш"
+
+msgid "Remove"
+msgstr "Ўчириш"
+
+msgid "Addition"
+msgstr "Қўшиш"
+
+msgid "Change"
+msgstr "Ўзгартириш"
+
+msgid "Deletion"
+msgstr "Ўчириш"
+
+msgid "action time"
+msgstr "ҳаракат вақти"
+
+msgid "content type"
+msgstr "таркиб тури"
+
+msgid "object id"
+msgstr "объект идентификатори"
+
+#. Translators: 'repr' means representation
+#. (https://docs.python.org/library/functions.html#repr)
+msgid "object repr"
+msgstr "объект тақдимоти"
+
+msgid "action flag"
+msgstr "ҳаракат байроғи"
+
+msgid "change message"
+msgstr "хабарни ўзгартириш"
+
+msgid "log entry"
+msgstr "журнал ёзуви"
+
+msgid "log entries"
+msgstr "журнал ёзувлари"
+
+#, python-format
+msgid "Added “%(object)s”."
+msgstr "“%(object)s” қўшилди."
+
+#, python-format
+msgid "Changed “%(object)s” — %(changes)s"
+msgstr "“%(object)s” — %(changes)s га ўзгартирилди."
+
+#, python-format
+msgid "Deleted “%(object)s.”"
+msgstr "“%(object)s” ўчирилди."
+
+msgid "LogEntry Object"
+msgstr "Журнал ёзуви объекти"
+
+#, python-brace-format
+msgid "Added {name} “{object}”."
+msgstr "{name} “{object}” қўшилди."
+
+msgid "Added."
+msgstr "Қўшилди."
+
+msgid "and"
+msgstr "ва"
+
+#, python-brace-format
+msgid "Changed {fields} for {name} “{object}”."
+msgstr "{name} “{object}” учун {fields} ўзгартирилди."
+
+#, python-brace-format
+msgid "Changed {fields}."
+msgstr "{fields} ўзгартирилди."
+
+#, python-brace-format
+msgid "Deleted {name} “{object}”."
+msgstr "{name} “{object}” ўчирилди."
+
+msgid "No fields changed."
+msgstr "Бирор майдон ўзгартирилмади."
+
+msgid "None"
+msgstr "Бўш"
+
+msgid "Hold down “Control”, or “Command” on a Mac, to select more than one."
+msgstr "Бир нечта танлаш учун “Control” тугмасини босиб туринг (ёки Macда “Command”)."
+
+msgid "Select this object for an action - {}"
+msgstr "Ҳаракат учун ушбу объектни танланг - {}"
+
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully."
+msgstr "{name} “{obj}” муваффақиятли қўшилди."
+
+msgid "You may edit it again below."
+msgstr "Уни қуйида яна таҳрирлашингиз мумкин."
+
+#, python-brace-format
+msgid ""
+"The {name} “{obj}” was added successfully. You may add another {name} below."
+msgstr ""
+"{name} “{obj}” муваффақиятли қўшилди. Қуйида яна бир {name} қўшишингиз мумкин."
+
+#, python-brace-format
+msgid ""
+"The {name} “{obj}” was changed successfully. You may edit it again below."
+msgstr ""
+"{name} “{obj}” муваффақиятли ўзгартирилди. Қуйида уни яна таҳрирлашингиз мумкин."
+
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully. You may edit it again below."
+msgstr "{name} “{obj}” муваффақиятли қўшилди. Қуйида уни таҳрирлашингиз мумкин."
+
+#, python-brace-format
+msgid ""
+"The {name} “{obj}” was changed successfully. You may add another {name} "
+"below."
+msgstr "{name} “{obj}” муваффақиятли ўзгартирилди. Қуйида яна бир {name} қўшишингиз мумкин."
+
+#, python-brace-format
+msgid "The {name} “{obj}” was changed successfully."
+msgstr "{name} “{obj}” муваффақиятли ўзгартирилди."
+
+msgid ""
+"Items must be selected in order to perform actions on them. No items have "
+"been changed."
+msgstr "Ҳаракатни бажариш учун элементлар танланиши керак. Ҳеч қандай элемент ўзгартирилмади."
+
+msgid "No action selected."
+msgstr "Ҳеч қандай ҳаракат танланмади."
+
+#, python-format
+msgid "The %(name)s “%(obj)s” was deleted successfully."
+msgstr "%(name)s “%(obj)s” муваффақиятли ўчирилди."
+
+#, python-format
+msgid "%(name)s with ID “%(key)s” doesn’t exist. Perhaps it was deleted?"
+msgstr "%(key)s идентификаторли %(name)s мавжуд эмас. Балки у ўчирилгандир?"
+
+#, python-format
+msgid "Add %s"
+msgstr "Қўшиш %s"
+
+#, python-format
+msgid "Change %s"
+msgstr "%sни ўзгартириш"
+
+#, python-format
+msgid "View %s"
+msgstr "Кўриш %s"
+
+msgid "Database error"
+msgstr "Маълумотлар базаси хатолиги юз берди"
+#, python-format
+msgid "%(count)s %(name)s was changed successfully."
+msgid_plural "%(count)s %(name)s were changed successfully."
+msgstr[0] "%(count)s та %(name)s муваффақиятли ўзгартирилди"
+
+#, python-format
+msgid "%(total_count)s selected"
+msgid_plural "All %(total_count)s selected"
+msgstr[0] "%(total_count)s та танланди"
+
+#, python-format
+msgid "0 of %(cnt)s selected"
+msgstr "Жами %(cnt)s тадан 0 та танланди"
+
+#, python-format
+msgid "Change history: %s"
+msgstr "Ўзгаришлар тарихи: %s"
+
+#. Translators: Model verbose name and instance
+#. representation, suitable to be an item in a
+#. list.
+#, python-format
+msgid "%(class_name)s %(instance)s"
+msgstr "%(class_name)s %(instance)s"
+
+#, python-format
+msgid ""
+"Deleting %(class_name)s %(instance)s would require deleting the following "
+"protected related objects: %(related_objects)s"
+msgstr "%(class_name)s %(instance)s ни ўчириш учун қуйидаги ҳимояланган боғлиқ объектларни ҳам ўчириш талаб қилинади: %(related_objects)s"
+
+msgid "Django site admin"
+msgstr "Django сайти админи"
+
+msgid "Django administration"
+msgstr "Django бошқаруви"
+
+msgid "Site administration"
+msgstr "Сайт бошқаруви"
+
+msgid "Log in"
+msgstr "Тизимга кириш"
+
+#, python-format
+msgid "%(app)s administration"
+msgstr "%(app)s бошқаруви"
+
+msgid "Page not found"
+msgstr "Саҳифа топилмади"
+
+msgid "We’re sorry, but the requested page could not be found."
+msgstr "Кечирасиз, сўралган саҳифа топилмади."
+
+msgid "Home"
+msgstr "Бош саҳифа"
+
+msgid "Server error"
+msgstr "Сервер хатолиги"
+
+msgid "Server error (500)"
+msgstr "Сервер хатолиги (500)"
+
+msgid "Server Error <em>(500)</em>"
+msgstr "Сервер хатолиги <em>(500)</em>"
+
+msgid ""
+"There’s been an error. It’s been reported to the site administrators via "
+"email and should be fixed shortly. Thanks for your patience."
+msgstr "Хатолик юз берди. Бу ҳақда сайт администраторларига электрон почта орқали хабар берилди ва тез орада тўғриланади. Сабр-тоқатингиз учун раҳмат."
+
+msgid "Run the selected action"
+msgstr "Танланган фаолиятни ишга тушириш"
+
+msgid "Go"
+msgstr "Бориш"
+
+msgid "Click here to select the objects across all pages"
+msgstr "Барча саҳифалардаги объектларни танлаш учун шу ерни босинг"
+
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr "Барча %(total_count)s %(module_name)s ни танлаш"
+
+msgid "Clear selection"
+msgstr "Танловни тозалаш"
+
+msgid "Breadcrumbs"
+msgstr "Йўл кўрсаткичлар"
+
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "%(name)s иловасидаги моделлар"
+
+msgid "Add"
+msgstr "Қўшиш"
+
+msgid "View"
+msgstr "Кўриш"
+
+msgid "You don’t have permission to view or edit anything."
+msgstr "Сизда ҳеч нарсани кўриш ёки таҳрирлаш учун рухсат йўқ."
+
+msgid ""
+"First, enter a username and password. Then, you’ll be able to edit more user "
+"options."
+msgstr "Аввало, фойдаланувчи номи ва паролни киритинг. Шундан сўнг, фойдаланувчи параметрларини таҳрирлашингиз мумкин бўлади."
+
+msgid "Enter a username and password."
+msgstr "Фойдаланувчи номи ва паролни киритинг."
+
+msgid "Change password"
+msgstr "Паролни ўзгартириш"
+
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "Илтимос, қуйидаги хатони тўгриланг."
+
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr "Фойдаланувчи <strong>%(username)s</strong> учун янги паролни киритинг."
+
+msgid "Skip to main content"
+msgstr "Асосий мазмунга ўтиш"
+
+msgid "Welcome,"
+msgstr "Хуш келибсиз,"
+
+msgid "View site"
+msgstr "Сайтни кўриш"
+
+msgid "Documentation"
+msgstr "Қўлланма"
+
+msgid "Log out"
+msgstr "Чиқиш"
+
+#, python-format
+msgid "Add %(name)s"
+msgstr "%(name)s қўшиш"
+
+msgid "History"
+msgstr "Тарих"
+
+msgid "View on site"
+msgstr "Сайтда кўриш"
+
+msgid "Filter"
+msgstr "Саралаш"
+
+msgid "Hide counts"
+msgstr "Сонларни яшириш"
+
+msgid "Show counts"
+msgstr "Сонларни кўрсатиш"
+
+msgid "Clear all filters"
+msgstr "Барча фильтрларни тозалаш"
+
+msgid "Remove from sorting"
+msgstr "Тартиблашдан чиқариш"
+
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "Тартиблаш устуворлиги: %(priority_number)s"
+
+msgid "Toggle sorting"
+msgstr "Тартиблашни ўзгартириш"
+
+msgid "Toggle theme (current theme: auto)"
+msgstr "Мавзуни ўзгартириш (жорий мавзу: авто)"
+
+msgid "Toggle theme (current theme: light)"
+msgstr "Мавзуни ўзгартириш (жорий мавзу: ёруғ)"
+
+msgid "Toggle theme (current theme: dark)"
+msgstr "Мавзуни ўзгартириш (жорий мавзу: қоронғи)"
+
+msgid "Delete"
+msgstr "Ўчириш"
+
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+"%(object_name)s '%(escaped_object)s' ни ўчириш натижасида боғлиқ объектлар ҳам ўчирилади, лекин сизда қуйидаги турдаги объектларни ўчиришга рухсат йўқ:"
+
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+"%(object_name)s '%(escaped_object)s' ни ўчириш учун қуйидаги ҳимояланган боғлиқ объектларни ҳам ўчириш талаб қилинади:"
+
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+"%(object_name)s \"%(escaped_object)s\" ни ўчирмоқчи эканингизга ишончингиз комилми? Қуйидаги барча боғлиқ элементлар ҳам ўчирилади:"
+
+msgid "Objects"
+msgstr "Объектлар"
+
+msgid "Yes, I’m sure"
+msgstr "Ҳа, ишончим комил"
+
+msgid "No, take me back"
+msgstr "Йўқ, орқага қайтиш"
+
+msgid "Delete multiple objects"
+msgstr "Бир нечта объектларни ўчириш"
+
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+"Танланган %(objects_name)s ни ўчириш боғлиқ объектларни ҳам ўчиришга олиб келади, лекин сизда қуйидаги турдаги объектларни ўчиришга рухсат йўқ:"
+
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+"Танланган %(objects_name)s ни ўчириш учун қуйидаги ҳимояланган боғлиқ объектларни ҳам ўчириш талаб қилинади:"
+
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+"Танланган %(objects_name)s ни ўчирмоқчи эканингизга ишончингиз комилми? Қуйидаги объектлар ва улар билан боғлиқ элементлар ўчирилади:"
+
+msgid "Delete?"
+msgstr "Ўчирасизми?"
+
+#, python-format
+msgid " By %(filter_title)s "
+msgstr " %(filter_title)s бўйича "
+
+msgid "Summary"
+msgstr "Хулоса"
+
+msgid "Recent actions"
+msgstr "Сўнги ҳаракатлар"
+
+msgid "My actions"
+msgstr "Менинг ҳаракатларим"
+
+msgid "None available"
+msgstr "Мавжуд эмас"
+
+msgid "Added:"
+msgstr "Қўшилди:"
+
+msgid "Changed:"
+msgstr "Ўзгартирилди:"
+
+msgid "Deleted:"
+msgstr "Ўчирилди:"
+
+msgid "Unknown content"
+msgstr "Номаълум мазмун"
+
+msgid ""
+"Something’s wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+"Маълумотлар базаси ўрнатилишида муаммо юз берди. Керакли жадваллар яратилганига ва уларга тегишли фойдаланувчи томонидан кириш мумкинлигига ишонч ҳосил қилинг."
+
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+"Сиз %(username)s сифатида аниқландингиз, лекин бу саҳифага киришга рухсатингиз йўқ. Бошқа аккаунт орқали кирмоқчимисиз?"
+
+msgid "Forgotten your password or username?"
+msgstr "Парол ёки фойдаланувчи номини унутдингизми?"
+
+msgid "Toggle navigation"
+msgstr "Навигацияни алмаштириш"
+
+msgid "Sidebar"
+msgstr "Ён панел"
+
+msgid "Start typing to filter…"
+msgstr "Саралаш учун ёзишни бошланг…"
+
+msgid "Filter navigation items"
+msgstr "Навигация элементларини саралаш"
+
+msgid "Date/time"
+msgstr "Сана/вақт"
+
+msgid "Action"
+msgstr "Ҳаракат"
+
+msgid "entry"
+msgid_plural "entries"
+msgstr[0] "ёзув"
+
+msgid ""
+"This object doesn’t have a change history. It probably wasn’t added via this "
+"admin site."
+msgstr "Бу объектнинг ўзгариш тарихи мавжуд эмас. Эҳтимол, у бу админ сайти орқали қўшилмаган."
+
+msgid "Show all"
+msgstr "Ҳаммасини кўрсатиш"
+
+msgid "Save"
+msgstr "Сақлаш"
+
+msgid "Popup closing…"
+msgstr "Попап ёпилмоқда…"
+
+msgid "Search"
+msgstr "Қидириш"
+
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] "%(counter)s та натижа"
+
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "Жами: %(full_result_count)s та"
+
+msgid "Save as new"
+msgstr "Янги сифатида сақлаш"
+
+msgid "Save and add another"
+msgstr "Сақлаш ва яна бирини қўшиш"
+
+msgid "Save and continue editing"
+msgstr "Сақлаш ва таҳрирлашни давом эттириш"
+
+msgid "Save and view"
+msgstr "Сақлаш ва кўриш"
+
+msgid "Close"
+msgstr "Ёпиш"
+
+#, python-format
+msgid "Change selected %(model)s"
+msgstr "Танланган %(model)s ни ўзгартириш"
+
+#, python-format
+msgid "Add another %(model)s"
+msgstr "Яна %(model)s қўшиш"
+
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr "Танланган %(model)s ни ўчириш"
+
+#, python-format
+msgid "View selected %(model)s"
+msgstr "Танланган %(model)s ни кўриш"
+
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "Сайтимизда вақт сарфлаганингиз учун раҳмат."
+
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "Сайтимизда вақт сарфлаганингиз учун раҳмат."
+
+msgid "Reset password"
+msgstr "Паролни тиклаш"
+
+msgid "Raw passwords are not stored, so there is no way to see the user’s password."
+msgstr "Асосий (raw) пароллар сақланмайди, шунинг учун фойдаланувчининг паролини кўришнинг иложи йўқ."
+
+msgid "Log in again"
+msgstr "Қайта тизимга кириш"
+
+msgid "Password change"
+msgstr "Паролни ўзгартириш"
+
+msgid "Your password was changed."
+msgstr "Паролингиз ўзгартирилди."
+
+msgid ""
+"Please enter your old password, for security’s sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr "Илтимос, хавфсизлик учун аввал эски паролингизни, сўнгра янги паролингизни икки марта киритинг."
+
+msgid "Change my password"
+msgstr "Паролимни ўзгартириш"
+
+msgid "Password reset"
+msgstr "Паролни тиклаш"
+
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "Паролингиз ўрнатилди. Эндиликда тизимга киришингиз мумкин."
+
+msgid "Password reset confirmation"
+msgstr "Паролни тиклашни тасдиқлаш"
+
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr "Илтимос, янги паролингизни икки марта киритинг. Тўғри киритилганини текширамиз."
+
+msgid "New password:"
+msgstr "Янги парол:"
+
+msgid "Confirm password:"
+msgstr "Паролни тасдиқланг:"
+
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr "Паролни тиклаш ҳаволаси яроқсиз. Балки у аввал фойдаланилган. Илтимос, янги ҳавола сўранг."
+
+msgid ""
+"We’ve emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr "Агар сиз киритган электрон почтага мос аккаунт мавжуд бўлса, паролни ўрнатиш бўйича кўрсатмалар электрон почтангизга юборилди. Яқин вақтда оласиз."
+
+msgid ""
+"If you don’t receive an email, please make sure you’ve entered the address "
+"you registered with, and check your spam folder."
+msgstr "Агар хат келмаса, рўйхатдан ўтган манзилни тўғри киритганингизни текширинг ва спам папкасини кўринг."
+
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr "Сизга бу хат %(site_name)s даги аккаунтингиз учун паролни тиклашни сўраганингиз учун юборилди."
+
+msgid "Please go to the following page and choose a new password:"
+msgstr "Қуйидаги саҳифага ўтиб, янги паролни танланг:"
+
+msgid "Your username, in case you’ve forgotten:"
+msgstr "Фойдаланувчи номингиз, агар унутган бўлсангиз:"
+
+msgid "Thanks for using our site!"
+msgstr "Сайтимиздан фойдаланганингиз учун раҳмат!"
+
+#, python-format
+msgid "The %(site_name)s team"
+msgstr "%(site_name)s жамоаси"
+
+msgid ""
+"Forgotten your password? Enter your email address below, and we’ll email "
+"instructions for setting a new one."
+msgstr "Паролингизни унутдингизми? Қуйида электрон почта манзилингизни киритинг, янги парол ўрнатиш бўйича кўрсатмаларни юборилади."
+
+msgid "Email address:"
+msgstr "Электрон почта манзили:"
+
+msgid "Reset my password"
+msgstr "Паролимни тиклаш"
+
+msgid "Select all objects on this page for an action"
+msgstr "Ушбу саҳифадаги барча объектларни фаолият учун танлаш"
+
+msgid "All dates"
+msgstr "Барча саналар"
+
+#, python-format
+msgid "Select %s"
+msgstr "%s ни танлаш"
+
+#, python-format
+msgid "Select %s to change"
+msgstr "Ўзгартириш учун %s ни танлаш"
+
+#, python-format
+msgid "Select %s to view"
+msgstr "Кўриш учун %s ни танлаш"
+
+msgid "Date:"
+msgstr "Сана:"
+
+msgid "Time:"
+msgstr "Вақт:"
+
+msgid "Lookup"
+msgstr "Қидириш"
+
+msgid "Currently:"
+msgstr "Ҳозирда:"
+
+msgid "Change:"
+msgstr "Ўзгартириш:"
+
+msgid "Authentication and Authorization"
+msgstr "Аутентификация ва Авторизация"
+
+#, python-format
+msgid "%(name)s object with primary key %(key)r does not exist."
+msgstr "%(key)r асосий калитли %(name)s объект мавжуд эмас"
+
+msgid "Password changed successfully."
+msgstr "Парол муваффақиятли ўзгартирилди."
+
+#, python-format
+msgid "Change password: %s"
+msgstr "Паролни ўзгартириш: %s"
+
+msgid "password"
+msgstr "парол"
+
+msgid "last login"
+msgstr "охирги кириш"
+
+msgid "No password set."
+msgstr "Ҳеч қандай парол ўрнатилмаган."
+
+msgid "Invalid password format or unknown hashing algorithm."
+msgstr "Нотўғри парол формати ёки номаълум хешлаш алгоритми ишлатилган."
+
+msgid "The two password fields didn’t match."
+msgstr "Иккала парол майдони бир-бирига мос келмади."
+
+msgid "Enter the same password as before, for verification."
+msgstr "Текшириш учун аввалги паролни киритинг."
+
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user’s "
+"password, but you can change the password using <a href=\"{}\">this form</a>."
+msgstr ""
+"Хом пароллар сақланмайди, шунинг учун бу фойдаланувчининг паролини кўриш "
+"имкони йўқ, лекин сиз <a href=\"{}\">ушбу форма</a>дан фойдаланиб "
+"паролни ўзгартиришингиз мумкин."
+
+#, python-format
+msgid ""
+"Please enter a correct %(username)s and password. Note that both fields may "
+"be case-sensitive."
+msgstr ""
+"Илтимос, тўғри %(username)s ва паролни киритинг. Эътибор беринг, икки "
+"майдон ҳам катта-кичик ҳарфга сезгир бўлиши мумкин."
+
+msgid "This account is inactive."
+msgstr "Бу аккаунт нофаол."
+
+msgid "Email"
+msgstr "Электрон почта"
+
+msgid "New password"
+msgstr "Янги парол"
+
+msgid "New password confirmation"
+msgstr "Янги паролни тасдиқлаш"
+
+msgid "Your old password was entered incorrectly. Please enter it again."
+msgstr "Эски паролингиз нотўғри киритилди. Илтимос, қайтадан киритинг."
+
+msgid "Old password"
+msgstr "Эски парол"
+
+msgid "Password (again)"
+msgstr "Парол (қайтадан)"
+
+msgid "algorithm"
+msgstr "алгоритм"
+
+msgid "iterations"
+msgstr "итерациялар"
+
+msgid "salt"
+msgstr "тўз"
+
+msgid "hash"
+msgstr "хеш"
+
+msgid "variety"
+msgstr "тур"
+
+msgid "version"
+msgstr "версия"
+
+msgid "memory cost"
+msgstr "хотира сарфи"
+
+msgid "time cost"
+msgstr "вақт сарфи"
+
+msgid "parallelism"
+msgstr "параллеллик"
+
+msgid "work factor"
+msgstr "иш омили"
+
+msgid "checksum"
+msgstr "назорат йиғиндиси"
+
+msgid "codename"
+msgstr "код номи"
+
+msgid "permission"
+msgstr "рухсатнома"
+
+msgid "permissions"
+msgstr "рухсатномалар"
+
+msgid "group"
+msgstr "группа"
+
+msgid "groups"
+msgstr "группалар"
+
+msgid "superuser status"
+msgstr "суперфойдаланувчи ҳолати"
+
+msgid ""
+"Designates that this user has all permissions without explicitly assigning "
+"them."
+msgstr ""
+"Бу фойдаланувчига барча рухсатномаларни алоҳида белгиламасдан берилишини "
+"белгилайди."
+
+msgid ""
+"The groups this user belongs to. A user will get all permissions granted to "
+"each of their groups."
+msgstr ""
+"Бу фойдаланувчи тегишли бўлган гуруҳлар. Фойдаланувчи гуруҳларига берилган "
+"барча рухсатномаларни олади."
+
+msgid "user permissions"
+msgstr "фойдаланувчи рухсатномалари"
+
+msgid "Specific permissions for this user."
+msgstr "Бу фойдаланувчи учун махсус рухсатномалар."
+
+msgid "username"
+msgstr "фойдаланувчи номи"
+
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr "Мажбурий. 150 та белгидан ошмаслиги керак. Фақат ҳарфлар, рақамлар ва @/./+/-/_."
+
+msgid "A user with that username already exists."
+msgstr "Бундай фойдаланувчи номи аллақачон мавжуд."
+
+msgid "first name"
+msgstr "исм"
+
+msgid "last name"
+msgstr "фамилия"
+
+msgid "email address"
+msgstr "электрон почта манзили"
+
+msgid "staff status"
+msgstr "ходим ҳолати"
+
+msgid "Designates whether the user can log into this admin site."
+msgstr "Фойдаланувчи бу админ сайтга кириши мумкинлигини белгилайди."
+
+msgid "active"
+msgstr "фаол"
+
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+"Фойдаланувчи фаол ҳисобланишини белгилайди. Аккаунтни ўчириш ўрнига буни "
+"танламаслик мумкин."
+
+msgid "date joined"
+msgstr "қўшилган сана"
+
+msgid "users"
+msgstr "фойдаланувчилар"
+
+#, python-format
+msgid ""
+"This password is too short. It must contain at least %(min_length)d "
+"character."
+msgid_plural ""
+"This password is too short. It must contain at least %(min_length)d "
+"characters."
+msgstr[0] "Бу парол жуда қисқа. У камида %(min_length)d та белгидан иборат бўлиши керак."
+
+#, python-format
+msgid "Your password must contain at least %(min_length)d character."
+msgid_plural "Your password must contain at least %(min_length)d characters."
+msgstr[0] "Паролингиз камида %(min_length)d та белгидан иборат бўлиши керак."
+
+#, python-format
+msgid "The password is too similar to the %(verbose_name)s."
+msgstr "Парол %(verbose_name)s билан жуда ўхшаш."
+
+msgid "Your password can’t be too similar to your other personal information."
+msgstr "Паролингиз бошқа шахсий маълумотларингизга жуда ўхшаш бўлмаслиги керак."
+
+msgid "This password is too common."
+msgstr "Бу парол жуда оддий."
+
+msgid "Your password can’t be a commonly used password."
+msgstr "Паролингиз одатда ишлатиладиган парол бўлмаслиги керак."
+
+msgid "This password is entirely numeric."
+msgstr "Бу парол тўлиқ рақамлардан иборат."
+
+msgid "Your password can’t be entirely numeric."
+msgstr "Паролингиз фақат рақамлардан иборат бўлмаслиги керак."
+
+#, python-format
+msgid "Password reset on %(site_name)s"
+msgstr "%(site_name)s сайтида парол тикланди"
+
+msgid ""
+"Enter a valid username. This value may contain only English letters, "
+"numbers, and @/./+/-/_ characters."
+msgstr "Тўғри фойдаланувчи номини киритинг. Фақат инглиз ҳарфлари, рақамлар ва @/./+/-/_ белгиларидан иборат бўлиши мумкин."
+
+msgid ""
+"Enter a valid username. This value may contain only letters, numbers, and "
+"@/./+/-/_ characters."
+msgstr "Тўғри фойдаланувчи номини киритинг. Фақат ҳарфлар, рақамлар ва @/./+/-/_ белгиларидан иборат бўлиши мумкин."
+
+msgid "Logged out"
+msgstr "Чиқиб кетилди"
+
+msgid "Password reset sent"
+msgstr "Парол тиклаш юборилди"
+
+msgid "Enter new password"
+msgstr "Янги паролни киритинг"
+
+msgid "Password reset unsuccessful"
+msgstr "Парол тиклаш муваффақиятсиз"
+
+msgid "Password reset complete"
+msgstr "Парол тиклаш тўлиқ бажарилди"
+
+msgid "Password change successful"
+msgstr "Парол муваффақиятли ўзгартирилди"
+
+msgid "That page number is not an integer"
+msgstr "Бу саҳифа рақами бутун сон эмас"
+
+msgid "That page number is less than 1"
+msgstr "Бу саҳифа рақами 1 дан кичик"
+
+msgid "That page contains no results"
+msgstr "Ушбу саҳифада ҳеч қандай натижа йўқ"
+
+msgid "Enter a valid value."
+msgstr "Тўғри қийматни киритинг."
+
+msgid "Enter a valid URL."
+msgstr "Тўғри URL манзилни киритинг."
+
+msgid "Enter a valid integer."
+msgstr "Тўғри бутун сонни киритинг."
+
+msgid "Enter a valid email address."
+msgstr "Тўғри электрон почта манзилини киритинг."
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+"Ҳарфлар, рақамлар, пастки чизиқ ёки чизиқчалардан иборат тўғри "
+"“slug” киритинг."
+
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+"Unicode ҳарфлари, рақамлари, пастки чизиқ ёки чизиқчалардан иборат "
+"тўғри “slug” киритинг."
+
+msgid "Enter a valid IPv4 address."
+msgstr "Тўғри IPv4 манзилни киритинг."
+
+msgid "Enter a valid IPv6 address."
+msgstr "Тўғри IPv6 манзилни киритинг."
+
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr "Тўғри IPv4 ёки IPv6 манзилни киритинг."
+
+msgid "Enter only digits separated by commas."
+msgstr "Фақат вергул билан ажратилган рақамларни киритинг."
+
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+"Бу қиймат %(limit_value)s га тенглигини таъминланг (ҳозир %(show_value)s)."
+
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "Бу қиймат %(limit_value)s дан кичик ёки унга тенг бўлишини текширинг."
+
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "Бу қиймат %(limit_value)s дан катта ёки унга тенг бўлишини текширинг."
+
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr "Бу қиймат %(limit_value)s қадамнинг кўпайтмаси бўлишини текширинг."
+
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+"Бу қиймат %(offset)s дан бошлаб %(limit_value)s қадам кўпайтмаси "
+"бўлишини таъминланг, масалан: %(offset)s, %(valid_value1)s, %(valid_value2)s ва ҳ.к."
+
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"Бу қиймат камида %(limit_value)d та белгидан иборат бўлиши шарт (ҳозир %(show_value)d та)."
+
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"Бу қиймат кўпи билан %(limit_value)d та белгидан иборат бўлиши шарт (ҳозир %(show_value)d та)."
+
+msgid "Enter a number."
+msgstr "Сон киритинг."
+
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] "Жами рақамлар сони %(max)s тадан кўп эмаслигини таъминланг."
+
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] "Ўнлик каср хоналари %(max)s тадан кўп эмаслигини таъминланг."
+
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] "Ўнлик нуқтагача %(max)s тадан кўп рақам бўлмаслигини таъминланг."
+
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+"“%(extension)s” файл кенгайтмасига рухсат берилмаган. Рухсат этилганлари: "
+"%(allowed_extensions)s."
+
+msgid "Null characters are not allowed."
+msgstr "Бўш (null) белгиларга рухсат берилмайди."
+
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr "%(field_labels)s билан %(model_name)s аллақачон мавжуд."
+
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr "“%(name)s” чеклови бузилган."
+
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr "%(value)r қиймати тўғри танлов эмас."
+
+msgid "This field cannot be null."
+msgstr "Бу майдон бўш (null) бўлиши мумкин эмас."
+
+msgid "This field cannot be blank."
+msgstr "Бу майдон бўш қолдирилиши мумкин эмас."
+
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr "\"%(field_label)s\" билан %(model_name)s аллақачон мавжуд."
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr "%(date_field_label)s %(lookup_type)s учун %(field_label)s уникал бўлиши керак."
+
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr "Майдон тури: %(field_type)s"
+
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr "“%(value)s” қиймати Рост ёки Ёлғон бўлиши керак."
+
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr "“%(value)s” қиймати Рост, Ёлғон ёки Йўқ бўлиши керак."
+
+msgid "Boolean (Either True or False)"
+msgstr "Мантиқий (Рост ёки Ёлғон)"
+
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr "Сатр (узунлиги %(max_length)s гача)"
+
+msgid "String (unlimited)"
+msgstr "Сатр (чексиз)"
+
+msgid "Comma-separated integers"
+msgstr "Вергул билан ажратилган бутун сонлар"
+
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr "“%(value)s” қиймати нотўғри сана форматида. YYYY-MM-DD форматда бўлиши керак."
+
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr "“%(value)s” қиймати YYYY-MM-DD форматда, лекин сана нотўғри."
+
+msgid "Date (without time)"
+msgstr "Сана (вақтсиз)"
+
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr "“%(value)s” қиймати нотўғри. YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] форматда бўлиши керак."
+
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr "“%(value)s” YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] форматда, лекин сана/вақт нотўғри."
+
+msgid "Date (with time)"
+msgstr "Сана (вақт билан)"
+
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr "“%(value)s” қиймати ўнлик сон бўлиши керак."
+
+msgid "Decimal number"
+msgstr "Ўнлик сон"
+
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr "“%(value)s” қиймати нотўғри. [DD] [[HH:]MM:]ss[.uuuuuu] форматда бўлиши керак."
+
+msgid "Duration"
+msgstr "Давомийлик"
+
+msgid "Email address"
+msgstr "Электрон почта манзили"
+
+msgid "File path"
+msgstr "Файл манзили"
+
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr "“%(value)s” қиймати ҳақиқий сон (float) бўлиши керак."
+
+msgid "Floating point number"
+msgstr "Ҳақиқий сон"
+
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr "“%(value)s” қиймати бутун сон бўлиши керак."
+
+msgid "Integer"
+msgstr "Бутун сон"
+
+msgid "Big (8 byte) integer"
+msgstr "Катта (8 байт) бутун сон"
+
+msgid "Small integer"
+msgstr "Кичик бутун сон"
+
+msgid "IPv4 address"
+msgstr "IPv4 манзил"
+
+msgid "IP address"
+msgstr "IP манзил"
+
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr "“%(value)s” қиймати Йўқ, Рост ёки Ёлғон бўлиши керак."
+
+msgid "Boolean (Either True, False or None)"
+msgstr "Мантиқий (Рост, Ёлғон ёки Йўқ)"
+
+msgid "Positive big integer"
+msgstr "Мусбат катта бутун сон"
+
+msgid "Positive integer"
+msgstr "Мусбат бутун сон"
+
+msgid "Positive small integer"
+msgstr "Мусбат кичик бутун сон"
+
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr "Slug (узунлиги %(max_length)s гача)"
+
+msgid "Text"
+msgstr "Матн"
+
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr "“%(value)s” қиймати нотўғри. HH:MM[:ss[.uuuuuu]] форматда бўлиши керак."
+
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr "“%(value)s” HH:MM[:ss[.uuuuuu]] форматда, лекин вақт нотўғри."
+
+msgid "Time"
+msgstr "Вақт"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Raw binary data"
+msgstr "Хом бинар маълумотлар"
+
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr "“%(value)s” тўғри UUID эмас."
+
+msgid "Universally unique identifier"
+msgstr "Умумий уникал идентификатор"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Image"
+msgstr "Расм"
+
+msgid "A JSON object"
+msgstr "JSON объект"
+
+msgid "Value must be valid JSON."
+msgstr "Қиймат тўғри JSON бўлиши керак."
+
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr "%(field)s %(value)r билан %(model)s мавжуд эмас."
+
+msgid "Foreign Key (type determined by related field)"
+msgstr "Ташқи калит (тури алоқадор майдонга боғлиқ)"
+
+msgid "One-to-one relationship"
+msgstr "Бирга-бир муносабат"
+
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr "%(from)s-%(to)s муносабати"
+
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr "%(from)s-%(to)s муносабатлари"
+
+msgid "Many-to-many relationship"
+msgstr "Кўп-кўпга муносабат"
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the
+#. label
+msgid ":?.!"
+msgstr ":?.!"
+
+msgid "This field is required."
+msgstr "Ушбу майдон тўлдирилиши шарт."
+
+msgid "Enter a whole number."
+msgstr "Бутун сонни киритинг."
+
+msgid "Enter a valid date."
+msgstr "Тўғри сана киритинг."
+
+msgid "Enter a valid time."
+msgstr "Тўғри вақт киритинг."
+
+msgid "Enter a valid date/time."
+msgstr "Тўғри сана/вақт киритинг."
+
+msgid "Enter a valid duration."
+msgstr "Тўғри давомийлик киритинг."
+
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr "Кунлар сони {min_days} ва {max_days} орасида бўлиши керак."
+
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr "Ҳеч қандай файл юборилмади. Форманинг кодлаш турини текширинг."
+
+msgid "No file was submitted."
+msgstr "Ҳеч қандай файл юборилмади."
+
+msgid "The submitted file is empty."
+msgstr "Юборилган файл бўш."
+
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] "Файл номи энг кўпи %(max)d та белгидан ошмаслиги керак (ҳозир %(length)d та)."
+
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr "Илтимос, файл юборинг ёки тозалашни белгиланг, лекин иккаласини эмас."
+
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr "Тўғри расм юкланг. Юкланган файл расм эмас ёки бузилган."
+
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "Тўғри танловни қилинг. %(value)s мавжуд вариантлардан бири эмас."
+
+msgid "Enter a list of values."
+msgstr "Қийматлар рўйхатини киритинг."
+
+msgid "Enter a complete value."
+msgstr "Тўлиқ қиймат киритинг."
+
+msgid "Enter a valid UUID."
+msgstr "Тўғри UUID киритинг."
+
+msgid "Enter a valid JSON."
+msgstr "Тўғри JSON киритинг."
+
+#. Translators: This is the default suffix added to form field labels
+msgid ":"
+msgstr ":"
+
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr "(Яширилган майдон %(name)s) %(error)s"
+
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr "ManagementForm маълумотлари йўқ ёки ўзгартирилган. Етишмаётган майдонлар: %(field_names)s. Муаммо давом этса, хатолик ҳақида хабар беринг."
+
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] "Илтимос, энг кўпи %(num)d та форма юборинг."
+
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] "Илтимос, камида %(num)d та форма юборинг."
+
+msgid "Order"
+msgstr "Тартиб"
+
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr "Илтимос, %(field)s учун такрор маълумотни тўғриланг."
+
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr "Илтимос, уникал бўлиши керак бўлган %(field)s учун такрор маълумотни тўғриланг."
+
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr "Илтимос, %(date_field)s ичидаги %(lookup)s учун уникал бўлиши керак бўлган %(field_name)s маълумотини тўғриланг."
+
+msgid "Please correct the duplicate values below."
+msgstr "Илтимос, қуйидаги такрор қийматларни тўғриланг."
+
+msgid "The inline value did not match the parent instance."
+msgstr "Ички қиймат асосий объектга мос келмади."
+
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr "Тўғри танловни қилинг. Бу вариант мавжуд эмас."
+
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr "“%(pk)s” тўғри қиймат эмас."
+
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr "%(datetime)s сана/вақт %(current_timezone)s вақт зонасида талқин қилинмади; у ноаниқ ёки мавжуд эмас бўлиши мумкин."
+
+msgid "Clear"
+msgstr "Тозалаш"
+
+msgid "Currently"
+msgstr "Ҳозирда"
+
+
+#. Translators: Please do not add spaces around commas.
+msgid "yes,no,maybe"
+msgstr "ҳа,йўқ,эҳтимол"
+
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] "%(size)d байт"
+
+#, python-format
+msgid "%s KB"
+msgstr "%s КБ"
+
+#, python-format
+msgid "%s MB"
+msgstr "%s МБ"
+
+#, python-format
+msgid "%s GB"
+msgstr "%s ГБ"
+
+#, python-format
+msgid "%s TB"
+msgstr "%s ТБ"
+
+#, python-format
+msgid "%s PB"
+msgstr "%s ПБ"
+
+msgid "p.m."
+msgstr "кечқурун"
+
+msgid "a.m."
+msgstr "эрталаб"
+
+msgid "PM"
+msgstr "Кечқурун"
+
+msgid "AM"
+msgstr "Эрталаб"
+
+msgid "midnight"
+msgstr "ярим тун"
+
+msgid "noon"
+msgstr "пешин"
+
+msgid "Monday"
+msgstr "Душанба"
+
+msgid "Tuesday"
+msgstr "Сешанба"
+
+msgid "Wednesday"
+msgstr "Чоршанба"
+
+msgid "Thursday"
+msgstr "Пайшанба"
+
+msgid "Friday"
+msgstr "Жума"
+
+msgid "Saturday"
+msgstr "Шанба"
+
+msgid "Sunday"
+msgstr "Якшанба"
+
+msgid "Mon"
+msgstr "Душ"
+
+msgid "Tue"
+msgstr "Сеш"
+
+msgid "Wed"
+msgstr "Чор"
+
+msgid "Thu"
+msgstr "Пай"
+
+msgid "Fri"
+msgstr "Жум"
+
+msgid "Sat"
+msgstr "Шан"
+
+msgid "Sun"
+msgstr "Як"
+
+msgid "January"
+msgstr "Январ"
+
+msgid "February"
+msgstr "Феврал"
+
+msgid "March"
+msgstr "Март"
+
+msgid "April"
+msgstr "Апрел"
+
+msgid "May"
+msgstr "Май"
+
+msgid "June"
+msgstr "Июн"
+
+msgid "July"
+msgstr "Июл"
+
+msgid "August"
+msgstr "Август"
+
+msgid "September"
+msgstr "Сентябр"
+
+msgid "October"
+msgstr "Октябр"
+
+msgid "November"
+msgstr "Ноябр"
+
+msgid "December"
+msgstr "Декабр"
+
+msgid "jan"
+msgstr "ян"
+
+msgid "feb"
+msgstr "фев"
+
+msgid "mar"
+msgstr "мар"
+
+msgid "apr"
+msgstr "апр"
+
+msgid "may"
+msgstr "май"
+
+msgid "jun"
+msgstr "июн"
+
+msgid "jul"
+msgstr "июл"
+
+msgid "aug"
+msgstr "авг"
+
+msgid "sep"
+msgstr "сен"
+
+msgid "oct"
+msgstr "окт"
+
+msgid "nov"
+msgstr "ноя"
+
+msgid "dec"
+msgstr "дек"
+
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr "Янв."
+
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr "Фев."
+
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "Март"
+
+msgctxt "abbrev. month"
+msgid "April"
+msgstr "Апр."
+
+msgctxt "abbrev. month"
+msgid "May"
+msgstr "Май"
+
+msgctxt "abbrev. month"
+msgid "June"
+msgstr "Июн"
+
+msgctxt "abbrev. month"
+msgid "July"
+msgstr "Июл"
+
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr "Авг."
+
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr "Сен."
+
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr "Окт."
+
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr "Ноя."
+
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr "Дек."
+
+msgctxt "alt. month"
+msgid "January"
+msgstr "Январ"
+
+msgctxt "alt. month"
+msgid "February"
+msgstr "Феврал"
+
+msgctxt "alt. month"
+msgid "March"
+msgstr "Март"
+
+msgctxt "alt. month"
+msgid "April"
+msgstr "Апрел"
+
+msgctxt "alt. month"
+msgid "May"
+msgstr "Май"
+
+msgctxt "alt. month"
+msgid "June"
+msgstr "Июн"
+
+msgctxt "alt. month"
+msgid "July"
+msgstr "Июл"
+
+msgctxt "alt. month"
+msgid "August"
+msgstr "Август"
+
+msgctxt "alt. month"
+msgid "September"
+msgstr "Сентябр"
+
+msgctxt "alt. month"
+msgid "October"
+msgstr "Октябр"
+
+msgctxt "alt. month"
+msgid "November"
+msgstr "Ноябр"
+
+msgctxt "alt. month"
+msgid "December"
+msgstr "Декабр"
+
+msgid "This is not a valid IPv6 address."
+msgstr "Бу тўғри IPv6 манзили эмас."
+
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr "%(truncated_text)s…"
+
+msgid "or"
+msgstr "ёки"
+
+#. Translators: This string is used as a separator between list elements
+msgid ", "
+msgstr ", "
+
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] "%(num)d йил"
+
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] "%(num)d ой"
+
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] "%(num)d ҳафта"
+
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] "%(num)d кун"
+
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] "%(num)d соат"
+
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] "%(num)d дақиқа"
+
+msgid "Forbidden"
+msgstr "Тақиқланган"
+
+msgid "CSRF verification failed. Request aborted."
+msgstr "CSRF текшируви амалга ошмади. Сўров бекор қилинди."
+
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+"Сиз бу хабарни кўряпсиз, чунки ушбу HTTPS сайт веб-браузерингиздан "
+"\"Referer\" сарлавҳасини юборишни талаб қилади, лекин у юборилмаган. "
+"Бу сарлавҳа хавфсизлик учун талаб қилинади, браузерингиз учинчи шахслар "
+"томонидан ўғирланмаганига ишонч ҳосил қилиш мақсадида."
+
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+"Агар сиз браузерингизни \"Referer\" сарлавҳаларини ўчиришга мослаб қўйган "
+"бўлсангиз, илтимос уларни қайта ёқинг, камида ушбу сайт учун, ёки HTTPS "
+"уланишлар учун, ёки \"same-origin\" сўровлари учун."
+
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+"Агар сиз <meta name=\"referrer\" content=\"no-referrer\"> тегидан ёки "
+"\"Referrer-Policy: no-referrer\" сарлавҳасидан фойдаланаётган бўлсангиз, "
+"илтимос, уларни олиб ташланг. CSRF ҳимояси қатъий текшириш учун "
+"\"Referer\" сарлавҳасини талаб қилади. Агар махфийликдан хавотирда "
+"бўлсангиз, учинчи шахс сайтларига ҳаволалар учун <a rel=\"noreferrer\" …> "
+"каби альтернативаларадан фойдаланинг."
+
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+"Сиз ушбу хабарни кўряпсиз, чунки бу сайт формаларни юборишда CSRF cookie "
+"талаб қилади. Бу cookie хавфсизлик нуқтаи назаридан, браузерингиз учинчи "
+"шахслар томонидан ўғирланмаслиги учун талаб қилинади."
+
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+"Агар сиз браузерингизни cookie маълумотларини ўчиришга мослаб қўйган "
+"бўлсангиз, илтимос, уларни қайта ёқинг, камида ушбу сайт учун ёки "
+"\"same-origin\" сўровлари учун."
+
+msgid "More information is available with DEBUG=True."
+msgstr "Қўшимча маълумотларни DEBUG=True орқали кўриш мумкин."
+
+msgid "No year specified"
+msgstr "Йил кўрсатилмаган"
+
+msgid "Date out of range"
+msgstr "Сана чегарадан ташқари"
+
+msgid "No month specified"
+msgstr "Ой кўрсатилмаган"
+
+msgid "No day specified"
+msgstr "Кун кўрсатилмаган"
+
+msgid "No week specified"
+msgstr "Ҳафта кўрсатилмаган"
+
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr "Ҳеч қандай %(verbose_name_plural)s мавжуд эмас"
+
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+"Келгусидаги %(verbose_name_plural)s мавжуд эмас, чунки %(class_name)s."
+"allow_future = False."
+
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+"\"%(datestr)s\" сана қатори нотўғри. Талаб қилинган формат: \"%(format)s\""
+
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr "Сўровга мос келадиган %(verbose_name)s топилмади"
+
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr "Саҳифа \"охирги\" эмас ва уни бутун сонга айлантириб бўлмайди."
+
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr "Нотўғри саҳифа (%(page_number)s): %(message)s"
+
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr "Рўйхат бўш ва \"%(class_name)s.allow_empty\" = False."
+
+msgid "Directory indexes are not allowed here."
+msgstr "Бу ерда директория индексларига рухсат йўқ."
+
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr "\"%(path)s\" мавжуд эмас"
+
+#, python-format
+msgid "Index of %(directory)s"
+msgstr "%(directory)s индекс"
+
+msgid "The install worked successfully! Congratulations!"
+msgstr "Ўрнатиш муваффақиятли бажарилди! Табриклаймиз!"
+
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+"Django %(version)s учун <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/releases/\" target=\"_blank\" rel=\"noopener\">релиз изоҳларини</a> кўриш"
+
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+"Сиз ушбу саҳифани кўряпсиз, чунки <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> созламалар файлингизда ўрнатилган ва сиз ҳали "
+"ҳеч қандай URL мослама қилмагансиз."
+
+msgid "Django Documentation"
+msgstr "Django Ҳужжатлари"
+
+msgid "Topics, references, &amp; how-to’s"
+msgstr "Мавзулар, ҳаволалар ва қўлланмалар"
+
+msgid "Tutorial: A Polling App"
+msgstr "Дарслик: Сўровнома иловаси"
+
+msgid "Get started with Django"
+msgstr "Django билан иш бошлаш"
+
+msgid "Django Community"
+msgstr "Django Ҳамжамияти"
+
+msgid "Connect, get help, or contribute"
+msgstr "Боғланинг, ёрдам олинг ёки ҳисса қўшинг"
+
+#: templates/admin/base.html:125
+msgid "Account"
+msgstr "Ҳисоб"
+
+#: templates/admin/base.html:143
+msgid "See Profile"
+msgstr "Профилни кўриш"
+
+#: templates/admin/base.html:294
+msgid "Jazzmin version"
+msgstr "Jazzmin версияси"
+
+#: templates/admin/base.html:297
+msgid "Copyright"
+msgstr "Муаллифлик ҳуқуқи"
+
+#: templates/admin/base.html:297
+msgid "All rights reserved."
+msgstr "Барча ҳуқуқлар ҳимояланган."
+
+#: templates/admin/base.html:313
+msgid "UI Configuration"
+msgstr "UI созламалари"
+
+#: templates/admin/base.html:317
+msgid "Copy this info your settings file to persist these UI changes"
+msgstr "Бу маълумотни UI ўзгаришларини сақлаш учун созламалар файлига кўчиринг"
+
+#: templates/admin/index.html:90
+#| msgid "%(entry.action_time|timesince)s ago"
+msgid "%(timesince)s ago"
+msgstr "%(timesince)s олдин"
+
+#: templates/admin/submit_line.html:8
+msgid "Actions"
+msgstr "Амаллар"
+
+#: templates/admin_doc/template_detail.html:13
+#, python-format
+msgid "Template: <q>%(name)s</q>"
+msgstr "Шаблон: <q>%(name)s</q>"
+
+#. Translators: Search is not a verb here, it qualifies path (a search path)
+#: templates/admin_doc/template_detail.html:17
+#, python-format
+msgid "Search path for template <q>%(name)s</q>:"
+msgstr "Шаблон учун қидириш йўли <q>%(name)s</q>:"
+
+#: templates/admin_doc/template_filter_index.html:37
+#: templates/admin_doc/view_index.html:43
+#, python-format
+msgid ""
+"View function: <code>%(full_name)s</code>. Name: <code>%(url_name)s</code>."
+msgstr ""
+"Кўриш функцияси: <code>%(full_name)s</code>. Номи: <code>%(url_name)s</code>."
+
+#: templatetags/jazzmin.py:406
+#, python-brace-format
+msgid "Deleted “{object}”."
+msgstr "“{object}” ўчирилди."
+
+#: utils.py:66
+#, python-brace-format
+msgid "Could not reverse url from {instance}"
+msgstr "URL {instance} дан қайта ёзиб бўлмади"
+
+msgid "This object doesn't have a change history. It probably wasn't added via this admin site."
+msgstr "Бу объектнинг ўзгариш тарихи йўқ. Эҳтимол, у ушбу админ сайт орқали қўшилмаган."
+
+msgid "Please enter your old password, for security's sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "Хавфсизлик учун эски паролингизни киритинг, сўнгра уни тўғри киритганингизни текширишимиз учун янги паролингизни икки марта киритинг."
+
+msgid "First, enter a username and password. Then, you'll be able to edit more user options."
+msgstr "Аввал фойдаланувчи номини ва паролни киритинг. Кейин бошқа фойдаланувчи танловларини таҳрирлай оласиз."

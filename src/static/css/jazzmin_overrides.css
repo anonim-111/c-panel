@@ -1,0 +1,16 @@
+.nav-sidebar .nav-item .nav-link {
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin: 2px 5px;
+}
+
+.nav-sidebar .nav-item .nav-link:hover {
+    background: linear-gradient(90deg, #4e73df, #1cc88a);
+    color: #fff !important;
+}
+
+.nav-treeview {
+    margin-left: 15px;
+    border-left: 2px solid #4e73df;
+    padding-left: 8px;
+}

@@ -1,0 +1,8 @@
+venv
+.venv
+.idea
+.env
+.vscode
+src/media
+__pycache__/
+node_modules/
