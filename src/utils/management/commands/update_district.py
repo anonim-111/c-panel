@@ -73,7 +73,7 @@ class Command(BaseCommand):
                     phone=get_phone(str(row[3].value)),
                     brigade_number=value,
                     polyclinic_name=row[5].value,
-                    neighborhood=Neighborhood.objects.filter(district_id=9, name=row[6].value).first()
+                    neighborhood=Neighborhood.objects.filter(district_id=3, name=row[6].value).first()
                 )
 
 
