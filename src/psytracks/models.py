@@ -125,6 +125,8 @@ class Patient(models.Model):
     pinfl = models.CharField(_("pinfl"), max_length=14)
     birth_date = models.DateField(_("birth_date"), null=True, blank=True)
     is_aggressive = models.BooleanField(_("is aggressive"), default=False)
+    is_convicted = models.BooleanField(_("is convicted"), default=False)
+    is_abroad_long_term = models.BooleanField(_("is abroad long term"), default=False)
     max_examination_interval = models.IntegerField(_("maximal examination interval (in days)"), default=30)
     neighborhood = models.ForeignKey(verbose_name=_("neighborhood"), to="utils.Neighborhood", on_delete=models.PROTECT, related_name="patients")
     inspector = models.ForeignKey(verbose_name=_("inspector"), to="utils.Inspector", on_delete=models.PROTECT, related_name="patients")

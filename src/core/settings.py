@@ -88,6 +88,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'panel_db',
+    #     'USER': 'panel_user',
+    #     'PASSWORD': '1q2w3e!Q@W#E',
+    #     'HOST': 'localhost',
+    #     'PORT': '5432',
+    # }
 }
 
 JAZZMIN_SETTINGS = {

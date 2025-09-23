@@ -23,6 +23,10 @@
                         {% trans "Total patient count" %}</a></th>
                     <th><a href="#" data-field="total_aggressive_patients" class="sortable text-decoration-none text-blue">
                         {% trans "Total aggressive patient count" %}</a></th>
+                    <th><a href="#" data-field="total_convicted_patients" class="sortable text-decoration-none text-blue">
+                        {% trans "Total convicted patient count" %}</a></th>
+                    <th><a href="#" data-field="total_abroad_long_term_patients" class="sortable text-decoration-none text-blue">
+                        {% trans "Total abroad long term patient count" %}</a></th>
                     <th><a href="#" data-field="on_time_count" class="sortable text-decoration-none text-blue">
                         {% trans "Number of mentally ill people who have not missed their follow-up check-up" %}</a></th>
                     <th><a href="#" data-field="late_count" class="sortable text-decoration-none text-blue">
@@ -39,6 +43,8 @@
                     <td><a href="{% if perms.psytracks.view_patient %} {% url 'admin:psytracks_patient_changelist' %}?neighborhood={{n.id}} {% else %}#{% endif %}"><b>{{ n.name }}</b></a></td>
                     <td>{{ n.total_patients }}</td>
                     <td>{{ n.total_aggressive_patients }}</td>
+                    <td>{{ n.total_convicted_patients }}</td>
+                    <td>{{ n.total_abroad_long_term_patients }}</td>
                     <td>{{ n.on_time_count }}</td>
                     <td>{{ n.late_count }}</td>
                     <td>{{ n.aggressive_on_time_count }}</td>
@@ -51,6 +57,8 @@
                     <td><b>{% trans "Totals" %}</b></td>
                     <td>{{ totals.total_patients }}</td>
                     <td>{{ totals.total_aggressive_patients }}</td>
+                    <td>{{ totals.total_convicted_patients }}</td>
+                    <td>{{ totals.total_abroad_long_term_patients }}</td>
                     <td>{{ totals.on_time_count }}</td>
                     <td>{{ totals.late_count }}</td>
                     <td>{{ totals.aggressive_on_time_count }}</td>

@@ -5,7 +5,7 @@ import openpyxl
 from django.contrib import admin
 from django.contrib.admin import SimpleListFilter
 from django.db.models import ExpressionWrapper, F, DateField, DurationField, Case, When, Value, BooleanField
-from django.db.models.functions import Greatest, Concat
+from django.db.models.functions import Greatest, Concat, Cast
 from django.http import HttpResponse
 from django.urls import path
 from django.utils import timezone
@@ -346,9 +346,10 @@ class DoctorAdmin(admin.ModelAdmin):
 
 @admin.register(Patient)
 class PatientAdmin(admin.ModelAdmin):
-    list_display = ("id", "full_name", "pinfl", "fbirth_date", "is_aggressive", "neighborhood__district", "neighborhood__name", "address",
-                    "inspector", "psychiatrist", "flast_psychiatric_appointment_date", "flast_home_visit_by_doctor_date",
-                    "reason", "receiving_supportive_therapy", "reason_for_special_consideration", "description_for_special_consideration",
+    list_display = ("id", "full_name", "pinfl", "fbirth_date", "is_aggressive", "is_convicted", "is_abroad_long_term",
+                    "neighborhood__district", "neighborhood__name", "address", "inspector", "psychiatrist",
+                    "flast_psychiatric_appointment_date", "flast_home_visit_by_doctor_date", "reason",
+                    "receiving_supportive_therapy", "reason_for_special_consideration", "description_for_special_consideration",
                     "alcohol_and_drug_use", "where_is_now", "description_where_is_now", "flast_hospitalization_from",
                     "flast_hospitalization_to", "next_psychiatric_appointment_date", "last_psychiatric_appointment_days_left"  )
     list_display_links = ("id", "full_name")
@@ -356,7 +357,8 @@ class PatientAdmin(admin.ModelAdmin):
     autocomplete_fields = ("psychiatrist", "inspector")
     search_fields = ["full_name__icontains"]
     change_list_template = "admin/patients_changelist.html"
-    list_filter = [DistrictFilter, NeighborhoodFilter, PsychiatristFilter, InspectorFilter, "is_aggressive", OverdueFilter]
+    list_filter = [DistrictFilter, NeighborhoodFilter, PsychiatristFilter, InspectorFilter, "is_aggressive",
+                   "is_convicted", "is_abroad_long_term", OverdueFilter]
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         user = request.user
@@ -433,12 +435,14 @@ class PatientAdmin(admin.ModelAdmin):
                     "flast_hospitalization_to", "last_psychiatric_appointment_file", "last_home_visit_by_doctor_file",
                     "last_hospitalization_from_file", "last_hospitalization_to_file", "max_examination_interval"]
         elif hasattr(user, "neighborhood"):
-            return ["full_name", "pinfl", "fbirth_date", "is_aggressive", "neighborhood_display", "address", "inspector_display", "psychiatrist_display",
+            return ["full_name", "pinfl", "fbirth_date", "is_aggressive", "is_convicted", "is_abroad_long_term",
+                    "neighborhood_display", "address", "inspector_display", "psychiatrist_display",
                     "reason_for_special_consideration_display", "description_for_special_consideration", "where_is_now",
                     "description_where_is_now", "social_domestic_environment_display", "last_psychiatric_appointment_file", "flast_psychiatric_appointment_date",
                     "flast_home_visit_by_doctor_date", "flast_hospitalization_from", "flast_hospitalization_to", "max_examination_interval"]
         elif hasattr(user, "psychiatrist"):
-            return ["full_name", "pinfl", "fbirth_date", "is_aggressive", "neighborhood_display", "address", "inspector_display", "psychiatrist_display",
+            return ["full_name", "pinfl", "fbirth_date", "is_aggressive", "is_convicted", "is_abroad_long_term",
+                    "neighborhood_display", "address", "inspector_display", "psychiatrist_display",
                     "reason_for_special_consideration_display", "description_for_special_consideration", "where_is_now",
                     "description_where_is_now", "social_domestic_environment_display", "flast_psychiatric_appointment_date",
                     "flast_home_visit_by_doctor_date", "flast_hospitalization_from", "flast_hospitalization_to", "max_examination_interval",
@@ -583,9 +587,12 @@ class PatientAdmin(admin.ModelAdmin):
                 F("max_examination_interval") * Value(datetime.timedelta(days=1)),
                 output_field=DurationField()
             ),
-            deadline=ExpressionWrapper(
-                F("last_date") + F("interval"),
-                output_field=DateField()
+            deadline=Cast(
+                ExpressionWrapper(
+                    F("last_date") + F("interval"),
+                    output_field=DateField(),
+                ),
+                DateField()
             ),
             is_overdue=Case(
                 When(last_date__isnull=True, then=Value(True)),
@@ -691,8 +698,9 @@ class PatientAdmin(admin.ModelAdmin):
                    "Охирги психиатр кабулига келган куни", "Охирги шифокор ёки хамшира томонидан уйдаги курик",
                    "Агар бир ой ичида кўрилмаган бўлса сабабини қўрсатилсин", "Кувватловчи терапия олиниши",
                    "Ижтимоий-Маиший муҳит", "Алкоголь, наркотик моддалар истемол килиши", "Охирги госпитализация",
-                   "Бемор ҳозирги кунда каерда", "Бемор ҳозирги кунда каерда изоҳ",	"Худуд еки Туман психиатр Ф.И.Ш.",	"Бириктирилган Ички ишлар ходими",
-                   "Аҳоли учун хавф туғдираяптими"])
+                   "Бемор ҳозирги кунда каерда", "Бемор ҳозирги кунда каерда изоҳ",	"Худуд еки Туман психиатр Ф.И.Ш.",
+                   "Бириктирилган Ички ишлар ходими", "Аҳоли учун хавф туғдираяптими", "Муқаддам судланганми",
+                   "Узоқ муддатга кетганми"])
 
         for index, obj in enumerate(qs, start=1):
             ws.append([
@@ -728,7 +736,9 @@ class PatientAdmin(admin.ModelAdmin):
                 obj.description_where_is_now,
                 obj.psychiatrist.full_name if obj.psychiatrist else "",
                 obj.inspector.full_name if obj.inspector else "",
-                "Ҳа" if obj.is_aggressive else "Йўқ"
+                "Ҳа" if obj.is_aggressive else "Йўқ",
+                "Ҳа" if obj.is_convicted else "Йўқ",
+                "Ҳа" if obj.is_abroad_long_term else "Йўқ",
             ])
 
         uniform_width = 20

@@ -183,7 +183,8 @@ class SettingsKeyAdmin(admin.ModelAdmin):
 @admin.register(DistrictMonitoring)
 class DistrictMonitoringAdmin(admin.ModelAdmin):
     change_list_template = "admin/district_monitoring.html"
-    list_display = ("name", "total_neighborhood", "total_patients", "total_aggressive_patients", "late_count",
+    list_display = ("name", "total_neighborhood", "total_patients", "total_aggressive_patients",
+                    "total_convicted_patients", "total_abroad_long_term_patients", "late_count",
                 "on_time_count", "aggressive_late_count", "aggressive_on_time_count")
 
     def change_view(self, request, object_id, form_url='', extra_context=None):
@@ -269,6 +270,16 @@ class DistrictMonitoringAdmin(admin.ModelAdmin):
                 filter=Q(patients__in=patients.filter(is_aggressive=True)),
                 distinct=True
             ),
+            total_convicted_patients=Count(
+                "patients",
+                filter=Q(patients__in=patients.filter(is_convicted=True)),
+                distinct=True
+            ),
+            total_abroad_long_term_patients=Count(
+                "patients",
+                filter=Q(patients__in=patients.filter(is_abroad_long_term=True)),
+                distinct=True
+            ),
             late_count=Count(
                 "patients",
                 filter=Q(patients__in=patients.filter(is_overdue=True)),
@@ -295,6 +306,8 @@ class DistrictMonitoringAdmin(admin.ModelAdmin):
         for row in qs:
             totals["total_patients"] += row.total_patients
             totals["total_aggressive_patients"] += row.total_aggressive_patients
+            totals["total_convicted_patients"] += row.total_convicted_patients
+            totals["total_abroad_long_term_patients"] += row.total_abroad_long_term_patients
             totals["on_time_count"] += row.on_time_count
             totals["late_count"] += row.late_count
             totals["aggressive_on_time_count"] += row.aggressive_on_time_count
@@ -396,6 +409,16 @@ class DistrictMonitoringAdmin(admin.ModelAdmin):
                 filter=Q(neighborhoods__patients__in=patients.filter(is_aggressive=True)),
                 distinct=True
             ),
+            total_convicted_patients=Count(
+                "neighborhoods__patients",
+                filter=Q(neighborhoods__patients__in=patients.filter(is_convicted=True)),
+                distinct=True
+            ),
+            total_abroad_long_term_patients=Count(
+                "neighborhoods__patients",
+                filter=Q(neighborhoods__patients__in=patients.filter(is_abroad_long_term=True)),
+                distinct=True
+            ),
             late_count=Count(
                 "neighborhoods__patients",
                 filter=Q(neighborhoods__patients__in=patients.filter(is_overdue=True)),
@@ -422,6 +445,8 @@ class DistrictMonitoringAdmin(admin.ModelAdmin):
             totals["total_neighborhood"] += row.total_neighborhood
             totals["total_patients"] += row.total_patients
             totals["total_aggressive_patients"] += row.total_aggressive_patients
+            totals["total_convicted_patients"] += row.total_convicted_patients
+            totals["total_abroad_long_term_patients"] += row.total_abroad_long_term_patients
             totals["on_time_count"] += row.on_time_count
             totals["late_count"] += row.late_count
             totals["aggressive_on_time_count"] += row.aggressive_on_time_count
@@ -446,6 +471,14 @@ class DistrictMonitoringAdmin(admin.ModelAdmin):
     @admin.display(ordering="total_aggressive_patients", description=_("Total aggressive patient count"))
     def total_aggressive_patients(self, obj):
         return obj.total_aggressive_patients
+
+    @admin.display(ordering="total_convicted_patients", description=_("Total convicted patient count"))
+    def total_convicted_patients(self, obj):
+        return obj.total_convicted_patients
+
+    @admin.display(ordering="total_abroad_long_term_patients", description=_("Total abroad long term patient count"))
+    def total_abroad_long_term_patients(self, obj):
+        return obj.total_abroad_long_term_patients
 
     @admin.display(ordering="total_neighborhood", description=_("Total neighborhood count"))
     def total_neighborhood(self, obj):
@@ -481,7 +514,10 @@ class DistrictMonitoringAdmin(admin.ModelAdmin):
         ws = wb.active
         ws.title = "tuman"
 
-        ws.append(["№", "Ҳудуд", "Жами маҳаллалар сони", "Жами руҳий касаллар сони", "Жами тажовузкор руҳий касаллар сони",
+        ws.append(["№", "Ҳудуд", "Жами маҳаллалар сони", "Жами руҳий касаллар сони",
+                   "Жами тажовузкор руҳий касаллар сони",
+                   "Жами муқаддам судланган руҳий касаллар сони",
+                   "Жами узоқ муддатга кетган руҳий касаллар сони",
                    "Кейинги текширувни ўтказиб юборган руҳий касаллар сони",
                    "Кейинги текширувни ўтказиб юбормаган руҳий касаллар сони",
                    "Кейинги текширувни ўтказиб юборган тажовузкор руҳий касаллар сони",
@@ -494,6 +530,8 @@ class DistrictMonitoringAdmin(admin.ModelAdmin):
                 obj.total_neighborhood,
                 obj.total_patients,
                 obj.total_aggressive_patients,
+                obj.total_convicted_patients,
+                obj.total_abroad_long_term_patients,
                 obj.late_count,
                 obj.on_time_count,
                 obj.aggressive_late_count,
@@ -502,6 +540,8 @@ class DistrictMonitoringAdmin(admin.ModelAdmin):
         ws.append(["", "Жами", qs.aggregate(total_neighborhoods=Sum("total_neighborhood"))["total_neighborhoods"] or 0,
                 qs.aggregate(total_patient=Sum("total_patients"))["total_patient"] or 0,
                 qs.aggregate(total_aggressive_patient=Sum("total_aggressive_patients"))["total_aggressive_patient"] or 0,
+                qs.aggregate(total_convicted_patient=Sum("total_convicted_patients"))["total_convicted_patient"] or 0,
+                qs.aggregate(total_abroad_long_term_patient=Sum("total_abroad_long_term_patients"))["total_abroad_long_term_patients"] or 0,
                 qs.aggregate(total_late_count=Sum("late_count"))["total_late_count"] or 0,
                 qs.aggregate(total_on_time_count=Sum("on_time_count"))["total_on_time_count"] or 0,
                 qs.aggregate(total_aggressive_late_count=Sum("aggressive_late_count"))["total_aggressive_late_count"] or 0,
@@ -535,7 +575,10 @@ class DistrictMonitoringAdmin(admin.ModelAdmin):
         ws = wb.active
         ws.title = "mahalla"
 
-        ws.append(["№", "Маҳалла", "Жами руҳий касаллар сони", "Жами тажовузкор руҳий касаллар сони",
+        ws.append(["№", "Маҳалла", "Жами руҳий касаллар сони",
+                   "Жами тажовузкор руҳий касаллар сони",
+                   "Жами муқаддам судланган руҳий касаллар сони",
+                   "Жами узоқ муддатга кетган руҳий касаллар сони",
                    "Кейинги текширувни ўтказиб юборган руҳий касаллар сони",
                    "Кейинги текширувни ўтказиб юбормаган руҳий касаллар сони",
                    "Кейинги текширувни ўтказиб юборган тажовузкор руҳий касаллар сони",
@@ -547,12 +590,15 @@ class DistrictMonitoringAdmin(admin.ModelAdmin):
                 obj.name,
                 obj.total_patients,
                 obj.total_aggressive_patients,
+                obj.total_convicted_patients,
+                obj.total_abroad_long_term_patients,
                 obj.late_count,
                 obj.on_time_count,
                 obj.aggressive_late_count,
                 obj.aggressive_on_time_count,
             ])
-        ws.append(["", "Жами", totals["total_patients"], totals["total_aggressive_patients"], totals["late_count"],
+        ws.append(["", "Жами", totals["total_patients"], totals["total_aggressive_patients"],
+                   totals["total_convicted_patients"], totals["total_abroad_long_term_patients"], totals["late_count"],
                    totals["on_time_count"], totals["aggressive_late_count"], totals["aggressive_on_time_count"]
                 ])
 
