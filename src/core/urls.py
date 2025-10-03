@@ -49,7 +49,12 @@ urlpatterns = [
     path('psychiatrist-autocomplete/', PsychiatristAutocomplete.as_view(), name='psychiatrist-autocomplete'),
     path("admin/district_patient_stats/", district_patient_stats, name="district_patient_stats"),
     path("admin/mahalla_patient_stats/<int:district_id>/", mahalla_patient_stats, name="mahalla_patient_stats"),
-    re_path(r'^media/(?P<path>.*)$', serve,
-            {'document_root': settings.MEDIA_ROOT}),
+    ]
+if settings.DEBUG:
+    urlpatterns += [
+        re_path(r'^media/(?P<path>.*)$', serve,
+                {'document_root': settings.MEDIA_ROOT}),
+        ]
+urlpatterns += [
     path('', admin.site.urls),
 ]
